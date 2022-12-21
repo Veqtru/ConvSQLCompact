@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCadastro">
+    <Key>
+      <PropertyRef Name="CodConta" />
+    </Key>
+    <Property Name="CodConta" Type="int" Nullable="false" />
+    <Property Name="NumRes" Type="int" />
+    <Property Name="NumCom" Type="int" />
+    <Property Name="NumInd" Type="int" />
+    <Property Name="NumPub" Type="int" />
+    <Property Name="Hidrometro" Type="nvarchar" MaxLength="20" />
+    <Property Name="TipoLigacao" Type="int" />
+    <Property Name="Piscina" Type="int" />
+    <Property Name="CaoBravo" Type="int" />
+    <Property Name="AlterouCad" Type="int" />
+    <Property Name="NumSoc" Type="int" />
+  </EntityType>
+  <EntityType Name="tblEncargos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Juros" Type="float" />
+    <Property Name="Multa" Type="float" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblLeitura">
+    <Key>
+      <PropertyRef Name="Codleitura" />
+    </Key>
+    <Property Name="CodConta" Type="int" />
+    <Property Name="Mes1" Type="datetime" />
+    <Property Name="Mes2" Type="datetime" />
+    <Property Name="Mes3" Type="datetime" />
+    <Property Name="Mes4" Type="datetime" />
+    <Property Name="Mes5" Type="datetime" />
+    <Property Name="Mes6" Type="datetime" />
+    <Property Name="MesAnoAnt" Type="datetime" />
+    <Property Name="CodOcor1" Type="int" />
+    <Property Name="CodOcor2" Type="int" />
+    <Property Name="CodOcor3" Type="int" />
+    <Property Name="CodOcor4" Type="int" />
+    <Property Name="CodOcor5" Type="int" />
+    <Property Name="CodOcor6" Type="int" />
+    <Property Name="CodOcorAnoAnt" Type="int" />
+    <Property Name="DiasConsumo1" Type="int" />
+    <Property Name="DiasConsumo2" Type="int" />
+    <Property Name="DiasConsumo3" Type="int" />
+    <Property Name="DiasConsumo4" Type="int" />
+    <Property Name="DiasConsumo5" Type="int" />
+    <Property Name="DiasConsumo6" Type="int" />
+    <Property Name="DiasConsAnoAnt" Type="int" />
+    <Property Name="Consumo1" Type="int" />
+    <Property Name="Consumo2" Type="int" />
+    <Property Name="Consumo3" Type="int" />
+    <Property Name="Consumo4" Type="int" />
+    <Property Name="Consumo5" Type="int" />
+    <Property Name="Consumo6" Type="int" />
+    <Property Name="ConsAnoAnt" Type="int" />
+    <Property Name="CodBanco" Type="nvarchar" MaxLength="3" />
+    <Property Name="CodAgencia" Type="nvarchar" MaxLength="4" />
+    <Property Name="Insumo1" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo1" Type="float" />
+    <Property Name="Insumo2" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo2" Type="float" />
+    <Property Name="Insumo3" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo3" Type="float" />
+    <Property Name="Insumo4" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo4" Type="float" />
+    <Property Name="Insumo5" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo5" Type="float" />
+    <Property Name="Insumo6" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo6" Type="float" />
+    <Property Name="Insumo7" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo7" Type="float" />
+    <Property Name="Insumo8" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo8" Type="float" />
+    <Property Name="Insumo9" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo9" Type="float" />
+    <Property Name="Insumo10" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo10" Type="float" />
+    <Property Name="Insumo11" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo11" Type="float" />
+    <Property Name="Insumo12" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo12" Type="float" />
+    <Property Name="Insumo13" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo13" Type="float" />
+    <Property Name="Insumo14" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo14" Type="float" />
+    <Property Name="Insumo15" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo15" Type="float" />
+    <Property Name="Insumo16" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo16" Type="float" />
+    <Property Name="Insumo17" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo17" Type="float" />
+    <Property Name="Insumo18" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo18" Type="float" />
+    <Property Name="Insumo19" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo19" Type="float" />
+    <Property Name="Insumo20" Type="nvarchar" MaxLength="60" />
+    <Property Name="ValorInsumo20" Type="float" />
+    <Property Name="NumRes" Type="int" />
+    <Property Name="NumCom" Type="int" />
+    <Property Name="NumInd" Type="int" />
+    <Property Name="NumPub" Type="int" />
+    <Property Name="DataVencto" Type="datetime" />
+    <Property Name="Ref" Type="nvarchar" MaxLength="30" />
+    <Property Name="MesFat" Type="datetime" />
+    <Property Name="Hidrometro" Type="nvarchar" MaxLength="20" />
+    <Property Name="NomeCliente" Type="nvarchar" MaxLength="50" />
+    <Property Name="Endereco" Type="nvarchar" MaxLength="70" />
+    <Property Name="EnderecoEnt" Type="nvarchar" MaxLength="100" />
+    <Property Name="Bairro" Type="nvarchar" MaxLength="50" />
+    <Property Name="BairroEnt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cidade" Type="nvarchar" MaxLength="50" />
+    <Property Name="CidadeEnt" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeituraAnt" Type="int" />
+    <Property Name="LeituraAtual" Type="int" />
+    <Property Name="DiasConsAtual" Type="int" />
+    <Property Name="ConsumoAtual" Type="int" />
+    <Property Name="DataLeitura" Type="datetime" />
+    <Property Name="CodOcorAtual" Type="int" />
+    <Property Name="Media" Type="int" />
+    <Property Name="ExisteDebAnt" Type="int" />
+    <Property Name="ObterMedia" Type="int" />
+    <Property Name="DescOcor" Type="nvarchar" MaxLength="35" />
+    <Property Name="MostraNaConta" Type="int" />
+    <Property Name="CodigoBar1" Type="nvarchar" MaxLength="11" />
+    <Property Name="CodigoBar2" Type="nvarchar" MaxLength="11" />
+    <Property Name="CodigoBar3" Type="nvarchar" MaxLength="11" />
+    <Property Name="CodigoBar4" Type="nvarchar" MaxLength="11" />
+    <Property Name="DigitoVer1" Type="nvarchar" MaxLength="1" />
+    <Property Name="DigitoVer2" Type="nvarchar" MaxLength="1" />
+    <Property Name="DigitoVer3" Type="nvarchar" MaxLength="1" />
+    <Property Name="DigitoVer4" Type="nvarchar" MaxLength="1" />
+    <Property Name="ValorTotal" Type="float" />
+    <Property Name="CodLogra" Type="int" />
+    <Property Name="CodLograEnt" Type="int" />
+    <Property Name="ContasEmAberto" Type="int" />
+    <Property Name="Vazamento" Type="int" />
+    <Property Name="Faturado" Type="int" />
+    <Property Name="HidroMovto" Type="int" />
+    <Property Name="Conferida" Type="int" />
+    <Property Name="NumPag" Type="int" />
+    <Property Name="PagAtual" Type="int" />
+    <Property Name="Codleitura" Type="int" Nullable="false" />
+    <Property Name="CodNotificacao" Type="int" />
+    <Property Name="MensagemConta" Type="nvarchar" MaxLength="250" />
+    <Property Name="Face" Type="int" />
+    <Property Name="Piscina" Type="int" />
+    <Property Name="CaoBravo" Type="int" />
+    <Property Name="TipoLigacao" Type="int" />
+    <Property Name="CodRegiaoRota" Type="int" />
+    <Property Name="SeqLeiturista" Type="int" />
+    <Property Name="SeqEndereco" Type="int" />
+    <Property Name="FezLeitura" Type="nvarchar" MaxLength="1" />
+    <Property Name="QtdeEdit" Type="int" />
+    <Property Name="HistLeitura" Type="nvarchar" MaxLength="400" />
+    <Property Name="Numero" Type="int" />
+    <Property Name="Complemento" Type="nvarchar" MaxLength="15" />
+    <Property Name="DataImpressao" Type="datetime" />
+    <Property Name="DataEntrega" Type="datetime" />
+    <Property Name="MediaMenor" Type="int" />
+    <Property Name="MediaMaior" Type="int" />
+    <Property Name="TemDivida" Type="int" />
+    <Property Name="QtdeRes" Type="int" />
+    <Property Name="MultiRes" Type="int" />
+    <Property Name="ConsumoMinimo" Type="int" />
+    <Property Name="CodTpCliente" Type="int" />
+    <Property Name="CodUsuario" Type="int" />
+    <Property Name="DataLeituraAnt" Type="datetime" />
+    <Property Name="Pendente" Type="int" />
+    <Property Name="TaxaOutros" Type="float" />
+    <Property Name="AlertaCodOcor" Type="int" />
+    <Property Name="Divida" Type="ntext" />
+    <Property Name="AlterouCad" Type="int" />
+    <Property Name="HidroVirou" Type="int" />
+    <Property Name="Obs" Type="nvarchar" MaxLength="350" />
+    <Property Name="NumSoc" Type="int" />
+    <Property Name="ConsResidual" Type="int" />
+    <Property Name="DiasResidual" Type="int" />
+    <Property Name="CodTabela" Type="int" />
+    <Property Name="Mes7" Type="datetime" />
+    <Property Name="Mes8" Type="datetime" />
+    <Property Name="Mes9" Type="datetime" />
+    <Property Name="Mes10" Type="datetime" />
+    <Property Name="Mes11" Type="datetime" />
+    <Property Name="Mes12" Type="datetime" />
+    <Property Name="CodOcor7" Type="int" />
+    <Property Name="CodOcor8" Type="int" />
+    <Property Name="CodOcor9" Type="int" />
+    <Property Name="CodOcor10" Type="int" />
+    <Property Name="CodOcor11" Type="int" />
+    <Property Name="CodOcor12" Type="int" />
+    <Property Name="DiasConsumo7" Type="int" />
+    <Property Name="DiasConsumo8" Type="int" />
+    <Property Name="DiasConsumo9" Type="int" />
+    <Property Name="DiasConsumo10" Type="int" />
+    <Property Name="DiasConsumo11" Type="int" />
+    <Property Name="DiasConsumo12" Type="int" />
+    <Property Name="Consumo7" Type="int" />
+    <Property Name="Consumo8" Type="int" />
+    <Property Name="Consumo9" Type="int" />
+    <Property Name="Consumo10" Type="int" />
+    <Property Name="Consumo11" Type="int" />
+    <Property Name="Consumo12" Type="int" />
+    <Property Name="CEP" Type="nvarchar" MaxLength="8" />
+    <Property Name="QuitacaoAnual" Type="int" />
+    <Property Name="Vazao" Type="float" />
+    <Property Name="DataInstalacao" Type="datetime" />
+    <Property Name="Situacao" Type="nvarchar" MaxLength="1" />
+    <Property Name="Notificacoes" Type="ntext" />
+    <Property Name="RespFinanc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblLog">
+    <Key>
+      <PropertyRef Name="CodReg" />
+    </Key>
+    <Property Name="DataSistema" Type="datetime" />
+    <Property Name="CodReg" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Versao" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblLogra">
+    <Key>
+      <PropertyRef Name="CodLogra" />
+    </Key>
+    <Property Name="CodLogra" Type="int" Nullable="false" />
+    <Property Name="NomeLogra" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bairro" Type="nvarchar" MaxLength="50" />
+    <Property Name="TotContas" Type="int" />
+  </EntityType>
+  <EntityType Name="tblMensagem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Mensagem" Type="nvarchar" MaxLength="500" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblOcor">
+    <Key>
+      <PropertyRef Name="CodOcor" />
+    </Key>
+    <Property Name="CodOcor" Type="int" Nullable="false" />
+    <Property Name="DescOcor" Type="nvarchar" MaxLength="35" />
+    <Property Name="ObterMedia" Type="smallint" />
+    <Property Name="MostraNaConta" Type="smallint" />
+    <Property Name="EvitaFreq" Type="smallint" />
+    <Property Name="ExigeLeitura" Type="smallint" />
+  </EntityType>
+  <EntityType Name="tblPosicao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="RegAtual" Type="int" />
+    <Property Name="RegAtualLeit" Type="int" />
+    <Property Name="CodRotaAtual" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblRota">
+    <Key>
+      <PropertyRef Name="CodRegiaoRota" />
+    </Key>
+    <Property Name="CodRegiaoRota" Type="int" Nullable="false" />
+    <Property Name="DescRota" Type="nvarchar" MaxLength="40" />
+    <Property Name="TotContas" Type="int" />
+    <Property Name="CodUsuario" Type="int" />
+    <Property Name="NomeUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="MesFat" Type="datetime" />
+    <Property Name="DataLiberacao" Type="datetime" />
+    <Property Name="MacAddress" Type="nvarchar" MaxLength="12" />
+    <Property Name="ProximaLeitura" Type="datetime" />
+    <Property Name="PosIniImpressao" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSistemaAbast">
+    <Key>
+      <PropertyRef Name="CodRegiaoRota" />
+    </Key>
+    <Property Name="Mesfat" Type="datetime" Nullable="false" />
+    <Property Name="CodSistemaAbast" Type="int" Nullable="false" />
+    <Property Name="DataInicial" Type="datetime" />
+    <Property Name="DataFinal" Type="datetime" />
+    <Property Name="TurbidezUnidade" Type="nvarchar" MaxLength="20" />
+    <Property Name="TurbidezValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+    <Property Name="TurbidezAnalisadas" Type="nvarchar" MaxLength="20" />
+    <Property Name="TurbidezValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+    <Property Name="TurbidezAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+    <Property Name="CorUnidade" Type="nvarchar" MaxLength="20" />
+    <Property Name="CorValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+    <Property Name="CorAnalisadas" Type="nvarchar" MaxLength="20" />
+    <Property Name="CorValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+    <Property Name="CorAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+    <Property Name="PHUnidade" Type="nvarchar" MaxLength="20" />
+    <Property Name="PHValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+    <Property Name="PHAnalisadas" Type="nvarchar" MaxLength="20" />
+    <Property Name="PHValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+    <Property Name="PHAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+    <Property Name="CloroUnidade" Type="nvarchar" MaxLength="20" />
+    <Property Name="CloroValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+    <Property Name="CloroAnalisadas" Type="nvarchar" MaxLength="20" />
+    <Property Name="CloroValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+    <Property Name="CloroAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+    <Property Name="ColiformesUnidade" Type="nvarchar" MaxLength="20" />
+    <Property Name="ColiformesValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+    <Property Name="ColiformesAnalisadas" Type="nvarchar" MaxLength="20" />
+    <Property Name="ColiformesValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+    <Property Name="ColiformesAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+    <Property Name="FluorUnidade" Type="nvarchar" MaxLength="20" />
+    <Property Name="FluorValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+    <Property Name="FluorAnalisadas" Type="nvarchar" MaxLength="20" />
+    <Property Name="FluorValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+    <Property Name="FluorAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+    <Property Name="CodRegiaoRota" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTarifaTabelas">
+    <Key>
+      <PropertyRef Name="CodTabela" />
+    </Key>
+    <Property Name="CodTabela" Type="int" Nullable="false" />
+    <Property Name="DescTabela" Type="nvarchar" MaxLength="50" />
+    <Property Name="DataVigor" Type="datetime" />
+    <Property Name="CodTabelaOrigem" Type="int" />
+  </EntityType>
+  <EntityType Name="tblTarifaTabelasCategoria">
+    <Key>
+      <PropertyRef Name="CodTabela" />
+      <PropertyRef Name="Faixa" />
+    </Key>
+    <Property Name="CodTabela" Type="int" Nullable="false" />
+    <Property Name="Faixa" Type="int" Nullable="false" />
+    <Property Name="AguaRes" Type="float" />
+    <Property Name="EsgotoRes" Type="float" />
+    <Property Name="ValorFaixaRes" Type="float" />
+    <Property Name="ValorFaixaResEsg" Type="float" />
+    <Property Name="AguaCom" Type="float" />
+    <Property Name="EsgotoCom" Type="float" />
+    <Property Name="ValorFaixaCom" Type="float" />
+    <Property Name="ValorFaixaComEsg" Type="float" />
+    <Property Name="AguaInd" Type="float" />
+    <Property Name="EsgotoInd" Type="float" />
+    <Property Name="ValorFaixaInd" Type="float" />
+    <Property Name="ValorFaixaIndEsg" Type="float" />
+    <Property Name="AguaPub" Type="float" />
+    <Property Name="EsgotoPub" Type="float" />
+    <Property Name="ValorFaixaPub" Type="float" />
+    <Property Name="ValorFaixaPubEsg" Type="float" />
+    <Property Name="AguaSoc" Type="float" />
+    <Property Name="EsgotoSoc" Type="float" />
+    <Property Name="ValorFaixaSoc" Type="float" />
+    <Property Name="ValorFaixaSocEsg" Type="float" />
+    <Property Name="AguaResAnt" Type="float" />
+    <Property Name="EsgotoResAnt" Type="float" />
+    <Property Name="ValorFaixaResAnt" Type="float" />
+    <Property Name="ValorFaixaResEsgAnt" Type="float" />
+    <Property Name="AguaComAnt" Type="float" />
+    <Property Name="EsgotoComAnt" Type="float" />
+    <Property Name="ValorFaixaComAnt" Type="float" />
+    <Property Name="ValorFaixaComEsgAnt" Type="float" />
+    <Property Name="AguaIndAnt" Type="float" />
+    <Property Name="EsgotoIndAnt" Type="float" />
+    <Property Name="ValorFaixaIndAnt" Type="float" />
+    <Property Name="ValorFaixaIndEsgAnt" Type="float" />
+    <Property Name="AguaPubAnt" Type="float" />
+    <Property Name="EsgotoPubAnt" Type="float" />
+    <Property Name="ValorFaixaPubAnt" Type="float" />
+    <Property Name="ValorFaixaPubEsgAnt" Type="float" />
+    <Property Name="AguaSocAnt" Type="float" />
+    <Property Name="EsgotoSocAnt" Type="float" />
+    <Property Name="ValorFaixaSocAnt" Type="float" />
+    <Property Name="ValorFaixaSocEsgAnt" Type="float" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="tblCadastro" EntityType="Self.tblCadastro" store:Type="Tables" />
+    <EntitySet Name="tblEncargos" EntityType="Self.tblEncargos" store:Type="Tables" />
+    <EntitySet Name="tblLeitura" EntityType="Self.tblLeitura" store:Type="Tables" />
+    <EntitySet Name="tblLog" EntityType="Self.tblLog" store:Type="Tables" />
+    <EntitySet Name="tblLogra" EntityType="Self.tblLogra" store:Type="Tables" />
+    <EntitySet Name="tblMensagem" EntityType="Self.tblMensagem" store:Type="Tables" />
+    <EntitySet Name="tblOcor" EntityType="Self.tblOcor" store:Type="Tables" />
+    <EntitySet Name="tblPosicao" EntityType="Self.tblPosicao" store:Type="Tables" />
+    <EntitySet Name="tblRota" EntityType="Self.tblRota" store:Type="Tables" />
+    <EntitySet Name="tblSistemaAbast" EntityType="Self.tblSistemaAbast" store:Type="Tables" />
+    <EntitySet Name="tblTarifaTabelas" EntityType="Self.tblTarifaTabelas" store:Type="Tables" />
+    <EntitySet Name="tblTarifaTabelasCategoria" EntityType="Self.tblTarifaTabelasCategoria" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

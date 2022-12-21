@@ -1,0 +1,1184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblCadastro">
+          <Key>
+            <PropertyRef Name="CodConta" />
+          </Key>
+          <Property Name="CodConta" Type="int" Nullable="false" />
+          <Property Name="NumRes" Type="int" />
+          <Property Name="NumCom" Type="int" />
+          <Property Name="NumInd" Type="int" />
+          <Property Name="NumPub" Type="int" />
+          <Property Name="Hidrometro" Type="nvarchar" MaxLength="20" />
+          <Property Name="TipoLigacao" Type="int" />
+          <Property Name="Piscina" Type="int" />
+          <Property Name="CaoBravo" Type="int" />
+          <Property Name="AlterouCad" Type="int" />
+          <Property Name="NumSoc" Type="int" />
+        </EntityType>
+        <EntityType Name="tblEncargos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Juros" Type="float" />
+          <Property Name="Multa" Type="float" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblLeitura">
+          <Key>
+            <PropertyRef Name="Codleitura" />
+          </Key>
+          <Property Name="CodConta" Type="int" />
+          <Property Name="Mes1" Type="datetime" />
+          <Property Name="Mes2" Type="datetime" />
+          <Property Name="Mes3" Type="datetime" />
+          <Property Name="Mes4" Type="datetime" />
+          <Property Name="Mes5" Type="datetime" />
+          <Property Name="Mes6" Type="datetime" />
+          <Property Name="MesAnoAnt" Type="datetime" />
+          <Property Name="CodOcor1" Type="int" />
+          <Property Name="CodOcor2" Type="int" />
+          <Property Name="CodOcor3" Type="int" />
+          <Property Name="CodOcor4" Type="int" />
+          <Property Name="CodOcor5" Type="int" />
+          <Property Name="CodOcor6" Type="int" />
+          <Property Name="CodOcorAnoAnt" Type="int" />
+          <Property Name="DiasConsumo1" Type="int" />
+          <Property Name="DiasConsumo2" Type="int" />
+          <Property Name="DiasConsumo3" Type="int" />
+          <Property Name="DiasConsumo4" Type="int" />
+          <Property Name="DiasConsumo5" Type="int" />
+          <Property Name="DiasConsumo6" Type="int" />
+          <Property Name="DiasConsAnoAnt" Type="int" />
+          <Property Name="Consumo1" Type="int" />
+          <Property Name="Consumo2" Type="int" />
+          <Property Name="Consumo3" Type="int" />
+          <Property Name="Consumo4" Type="int" />
+          <Property Name="Consumo5" Type="int" />
+          <Property Name="Consumo6" Type="int" />
+          <Property Name="ConsAnoAnt" Type="int" />
+          <Property Name="CodBanco" Type="nvarchar" MaxLength="3" />
+          <Property Name="CodAgencia" Type="nvarchar" MaxLength="4" />
+          <Property Name="Insumo1" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo1" Type="float" />
+          <Property Name="Insumo2" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo2" Type="float" />
+          <Property Name="Insumo3" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo3" Type="float" />
+          <Property Name="Insumo4" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo4" Type="float" />
+          <Property Name="Insumo5" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo5" Type="float" />
+          <Property Name="Insumo6" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo6" Type="float" />
+          <Property Name="Insumo7" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo7" Type="float" />
+          <Property Name="Insumo8" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo8" Type="float" />
+          <Property Name="Insumo9" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo9" Type="float" />
+          <Property Name="Insumo10" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo10" Type="float" />
+          <Property Name="Insumo11" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo11" Type="float" />
+          <Property Name="Insumo12" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo12" Type="float" />
+          <Property Name="Insumo13" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo13" Type="float" />
+          <Property Name="Insumo14" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo14" Type="float" />
+          <Property Name="Insumo15" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo15" Type="float" />
+          <Property Name="Insumo16" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo16" Type="float" />
+          <Property Name="Insumo17" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo17" Type="float" />
+          <Property Name="Insumo18" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo18" Type="float" />
+          <Property Name="Insumo19" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo19" Type="float" />
+          <Property Name="Insumo20" Type="nvarchar" MaxLength="60" />
+          <Property Name="ValorInsumo20" Type="float" />
+          <Property Name="NumRes" Type="int" />
+          <Property Name="NumCom" Type="int" />
+          <Property Name="NumInd" Type="int" />
+          <Property Name="NumPub" Type="int" />
+          <Property Name="DataVencto" Type="datetime" />
+          <Property Name="Ref" Type="nvarchar" MaxLength="30" />
+          <Property Name="MesFat" Type="datetime" />
+          <Property Name="Hidrometro" Type="nvarchar" MaxLength="20" />
+          <Property Name="NomeCliente" Type="nvarchar" MaxLength="50" />
+          <Property Name="Endereco" Type="nvarchar" MaxLength="70" />
+          <Property Name="EnderecoEnt" Type="nvarchar" MaxLength="100" />
+          <Property Name="Bairro" Type="nvarchar" MaxLength="50" />
+          <Property Name="BairroEnt" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cidade" Type="nvarchar" MaxLength="50" />
+          <Property Name="CidadeEnt" Type="nvarchar" MaxLength="50" />
+          <Property Name="LeituraAnt" Type="int" />
+          <Property Name="LeituraAtual" Type="int" />
+          <Property Name="DiasConsAtual" Type="int" />
+          <Property Name="ConsumoAtual" Type="int" />
+          <Property Name="DataLeitura" Type="datetime" />
+          <Property Name="CodOcorAtual" Type="int" />
+          <Property Name="Media" Type="int" />
+          <Property Name="ExisteDebAnt" Type="int" />
+          <Property Name="ObterMedia" Type="int" />
+          <Property Name="DescOcor" Type="nvarchar" MaxLength="35" />
+          <Property Name="MostraNaConta" Type="int" />
+          <Property Name="CodigoBar1" Type="nvarchar" MaxLength="11" />
+          <Property Name="CodigoBar2" Type="nvarchar" MaxLength="11" />
+          <Property Name="CodigoBar3" Type="nvarchar" MaxLength="11" />
+          <Property Name="CodigoBar4" Type="nvarchar" MaxLength="11" />
+          <Property Name="DigitoVer1" Type="nvarchar" MaxLength="1" />
+          <Property Name="DigitoVer2" Type="nvarchar" MaxLength="1" />
+          <Property Name="DigitoVer3" Type="nvarchar" MaxLength="1" />
+          <Property Name="DigitoVer4" Type="nvarchar" MaxLength="1" />
+          <Property Name="ValorTotal" Type="float" />
+          <Property Name="CodLogra" Type="int" />
+          <Property Name="CodLograEnt" Type="int" />
+          <Property Name="ContasEmAberto" Type="int" />
+          <Property Name="Vazamento" Type="int" />
+          <Property Name="Faturado" Type="int" />
+          <Property Name="HidroMovto" Type="int" />
+          <Property Name="Conferida" Type="int" />
+          <Property Name="NumPag" Type="int" />
+          <Property Name="PagAtual" Type="int" />
+          <Property Name="Codleitura" Type="int" Nullable="false" />
+          <Property Name="CodNotificacao" Type="int" />
+          <Property Name="MensagemConta" Type="nvarchar" MaxLength="250" />
+          <Property Name="Face" Type="int" />
+          <Property Name="Piscina" Type="int" />
+          <Property Name="CaoBravo" Type="int" />
+          <Property Name="TipoLigacao" Type="int" />
+          <Property Name="CodRegiaoRota" Type="int" />
+          <Property Name="SeqLeiturista" Type="int" />
+          <Property Name="SeqEndereco" Type="int" />
+          <Property Name="FezLeitura" Type="nvarchar" MaxLength="1" />
+          <Property Name="QtdeEdit" Type="int" />
+          <Property Name="HistLeitura" Type="nvarchar" MaxLength="400" />
+          <Property Name="Numero" Type="int" />
+          <Property Name="Complemento" Type="nvarchar" MaxLength="15" />
+          <Property Name="DataImpressao" Type="datetime" />
+          <Property Name="DataEntrega" Type="datetime" />
+          <Property Name="MediaMenor" Type="int" />
+          <Property Name="MediaMaior" Type="int" />
+          <Property Name="TemDivida" Type="int" />
+          <Property Name="QtdeRes" Type="int" />
+          <Property Name="MultiRes" Type="int" />
+          <Property Name="ConsumoMinimo" Type="int" />
+          <Property Name="CodTpCliente" Type="int" />
+          <Property Name="CodUsuario" Type="int" />
+          <Property Name="DataLeituraAnt" Type="datetime" />
+          <Property Name="Pendente" Type="int" />
+          <Property Name="TaxaOutros" Type="float" />
+          <Property Name="AlertaCodOcor" Type="int" />
+          <Property Name="Divida" Type="ntext" />
+          <Property Name="AlterouCad" Type="int" />
+          <Property Name="HidroVirou" Type="int" />
+          <Property Name="Obs" Type="nvarchar" MaxLength="350" />
+          <Property Name="NumSoc" Type="int" />
+          <Property Name="ConsResidual" Type="int" />
+          <Property Name="DiasResidual" Type="int" />
+          <Property Name="CodTabela" Type="int" />
+          <Property Name="Mes7" Type="datetime" />
+          <Property Name="Mes8" Type="datetime" />
+          <Property Name="Mes9" Type="datetime" />
+          <Property Name="Mes10" Type="datetime" />
+          <Property Name="Mes11" Type="datetime" />
+          <Property Name="Mes12" Type="datetime" />
+          <Property Name="CodOcor7" Type="int" />
+          <Property Name="CodOcor8" Type="int" />
+          <Property Name="CodOcor9" Type="int" />
+          <Property Name="CodOcor10" Type="int" />
+          <Property Name="CodOcor11" Type="int" />
+          <Property Name="CodOcor12" Type="int" />
+          <Property Name="DiasConsumo7" Type="int" />
+          <Property Name="DiasConsumo8" Type="int" />
+          <Property Name="DiasConsumo9" Type="int" />
+          <Property Name="DiasConsumo10" Type="int" />
+          <Property Name="DiasConsumo11" Type="int" />
+          <Property Name="DiasConsumo12" Type="int" />
+          <Property Name="Consumo7" Type="int" />
+          <Property Name="Consumo8" Type="int" />
+          <Property Name="Consumo9" Type="int" />
+          <Property Name="Consumo10" Type="int" />
+          <Property Name="Consumo11" Type="int" />
+          <Property Name="Consumo12" Type="int" />
+          <Property Name="CEP" Type="nvarchar" MaxLength="8" />
+          <Property Name="QuitacaoAnual" Type="int" />
+          <Property Name="Vazao" Type="float" />
+          <Property Name="DataInstalacao" Type="datetime" />
+          <Property Name="Situacao" Type="nvarchar" MaxLength="1" />
+          <Property Name="Notificacoes" Type="ntext" />
+          <Property Name="RespFinanc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblLog">
+          <Key>
+            <PropertyRef Name="CodReg" />
+          </Key>
+          <Property Name="DataSistema" Type="datetime" />
+          <Property Name="CodReg" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Versao" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="tblLogra">
+          <Key>
+            <PropertyRef Name="CodLogra" />
+          </Key>
+          <Property Name="CodLogra" Type="int" Nullable="false" />
+          <Property Name="NomeLogra" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bairro" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotContas" Type="int" />
+        </EntityType>
+        <EntityType Name="tblMensagem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Mensagem" Type="nvarchar" MaxLength="500" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblOcor">
+          <Key>
+            <PropertyRef Name="CodOcor" />
+          </Key>
+          <Property Name="CodOcor" Type="int" Nullable="false" />
+          <Property Name="DescOcor" Type="nvarchar" MaxLength="35" />
+          <Property Name="ObterMedia" Type="smallint" />
+          <Property Name="MostraNaConta" Type="smallint" />
+          <Property Name="EvitaFreq" Type="smallint" />
+          <Property Name="ExigeLeitura" Type="smallint" />
+        </EntityType>
+        <EntityType Name="tblPosicao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="RegAtual" Type="int" />
+          <Property Name="RegAtualLeit" Type="int" />
+          <Property Name="CodRotaAtual" Type="int" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblRota">
+          <Key>
+            <PropertyRef Name="CodRegiaoRota" />
+          </Key>
+          <Property Name="CodRegiaoRota" Type="int" Nullable="false" />
+          <Property Name="DescRota" Type="nvarchar" MaxLength="40" />
+          <Property Name="TotContas" Type="int" />
+          <Property Name="CodUsuario" Type="int" />
+          <Property Name="NomeUsuario" Type="nvarchar" MaxLength="50" />
+          <Property Name="MesFat" Type="datetime" />
+          <Property Name="DataLiberacao" Type="datetime" />
+          <Property Name="MacAddress" Type="nvarchar" MaxLength="12" />
+          <Property Name="ProximaLeitura" Type="datetime" />
+          <Property Name="PosIniImpressao" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSistemaAbast">
+          <Key>
+            <PropertyRef Name="CodRegiaoRota" />
+          </Key>
+          <Property Name="Mesfat" Type="datetime" Nullable="false" />
+          <Property Name="CodSistemaAbast" Type="int" Nullable="false" />
+          <Property Name="DataInicial" Type="datetime" />
+          <Property Name="DataFinal" Type="datetime" />
+          <Property Name="TurbidezUnidade" Type="nvarchar" MaxLength="20" />
+          <Property Name="TurbidezValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+          <Property Name="TurbidezAnalisadas" Type="nvarchar" MaxLength="20" />
+          <Property Name="TurbidezValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+          <Property Name="TurbidezAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+          <Property Name="CorUnidade" Type="nvarchar" MaxLength="20" />
+          <Property Name="CorValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+          <Property Name="CorAnalisadas" Type="nvarchar" MaxLength="20" />
+          <Property Name="CorValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+          <Property Name="CorAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+          <Property Name="PHUnidade" Type="nvarchar" MaxLength="20" />
+          <Property Name="PHValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+          <Property Name="PHAnalisadas" Type="nvarchar" MaxLength="20" />
+          <Property Name="PHValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+          <Property Name="PHAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+          <Property Name="CloroUnidade" Type="nvarchar" MaxLength="20" />
+          <Property Name="CloroValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+          <Property Name="CloroAnalisadas" Type="nvarchar" MaxLength="20" />
+          <Property Name="CloroValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+          <Property Name="CloroAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+          <Property Name="ColiformesUnidade" Type="nvarchar" MaxLength="20" />
+          <Property Name="ColiformesValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+          <Property Name="ColiformesAnalisadas" Type="nvarchar" MaxLength="20" />
+          <Property Name="ColiformesValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+          <Property Name="ColiformesAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+          <Property Name="FluorUnidade" Type="nvarchar" MaxLength="20" />
+          <Property Name="FluorValorMaxPermitido" Type="nvarchar" MaxLength="20" />
+          <Property Name="FluorAnalisadas" Type="nvarchar" MaxLength="20" />
+          <Property Name="FluorValorMedioDetectado" Type="nvarchar" MaxLength="20" />
+          <Property Name="FluorAmostrasPadrao" Type="nvarchar" MaxLength="20" />
+          <Property Name="CodRegiaoRota" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblTarifaTabelas">
+          <Key>
+            <PropertyRef Name="CodTabela" />
+          </Key>
+          <Property Name="CodTabela" Type="int" Nullable="false" />
+          <Property Name="DescTabela" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataVigor" Type="datetime" />
+          <Property Name="CodTabelaOrigem" Type="int" />
+        </EntityType>
+        <EntityType Name="tblTarifaTabelasCategoria">
+          <Key>
+            <PropertyRef Name="CodTabela" />
+            <PropertyRef Name="Faixa" />
+          </Key>
+          <Property Name="CodTabela" Type="int" Nullable="false" />
+          <Property Name="Faixa" Type="int" Nullable="false" />
+          <Property Name="AguaRes" Type="float" />
+          <Property Name="EsgotoRes" Type="float" />
+          <Property Name="ValorFaixaRes" Type="float" />
+          <Property Name="ValorFaixaResEsg" Type="float" />
+          <Property Name="AguaCom" Type="float" />
+          <Property Name="EsgotoCom" Type="float" />
+          <Property Name="ValorFaixaCom" Type="float" />
+          <Property Name="ValorFaixaComEsg" Type="float" />
+          <Property Name="AguaInd" Type="float" />
+          <Property Name="EsgotoInd" Type="float" />
+          <Property Name="ValorFaixaInd" Type="float" />
+          <Property Name="ValorFaixaIndEsg" Type="float" />
+          <Property Name="AguaPub" Type="float" />
+          <Property Name="EsgotoPub" Type="float" />
+          <Property Name="ValorFaixaPub" Type="float" />
+          <Property Name="ValorFaixaPubEsg" Type="float" />
+          <Property Name="AguaSoc" Type="float" />
+          <Property Name="EsgotoSoc" Type="float" />
+          <Property Name="ValorFaixaSoc" Type="float" />
+          <Property Name="ValorFaixaSocEsg" Type="float" />
+          <Property Name="AguaResAnt" Type="float" />
+          <Property Name="EsgotoResAnt" Type="float" />
+          <Property Name="ValorFaixaResAnt" Type="float" />
+          <Property Name="ValorFaixaResEsgAnt" Type="float" />
+          <Property Name="AguaComAnt" Type="float" />
+          <Property Name="EsgotoComAnt" Type="float" />
+          <Property Name="ValorFaixaComAnt" Type="float" />
+          <Property Name="ValorFaixaComEsgAnt" Type="float" />
+          <Property Name="AguaIndAnt" Type="float" />
+          <Property Name="EsgotoIndAnt" Type="float" />
+          <Property Name="ValorFaixaIndAnt" Type="float" />
+          <Property Name="ValorFaixaIndEsgAnt" Type="float" />
+          <Property Name="AguaPubAnt" Type="float" />
+          <Property Name="EsgotoPubAnt" Type="float" />
+          <Property Name="ValorFaixaPubAnt" Type="float" />
+          <Property Name="ValorFaixaPubEsgAnt" Type="float" />
+          <Property Name="AguaSocAnt" Type="float" />
+          <Property Name="EsgotoSocAnt" Type="float" />
+          <Property Name="ValorFaixaSocAnt" Type="float" />
+          <Property Name="ValorFaixaSocEsgAnt" Type="float" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="tblCadastro" EntityType="Self.tblCadastro" store:Type="Tables" />
+          <EntitySet Name="tblEncargos" EntityType="Self.tblEncargos" store:Type="Tables" />
+          <EntitySet Name="tblLeitura" EntityType="Self.tblLeitura" store:Type="Tables" />
+          <EntitySet Name="tblLog" EntityType="Self.tblLog" store:Type="Tables" />
+          <EntitySet Name="tblLogra" EntityType="Self.tblLogra" store:Type="Tables" />
+          <EntitySet Name="tblMensagem" EntityType="Self.tblMensagem" store:Type="Tables" />
+          <EntitySet Name="tblOcor" EntityType="Self.tblOcor" store:Type="Tables" />
+          <EntitySet Name="tblPosicao" EntityType="Self.tblPosicao" store:Type="Tables" />
+          <EntitySet Name="tblRota" EntityType="Self.tblRota" store:Type="Tables" />
+          <EntitySet Name="tblSistemaAbast" EntityType="Self.tblSistemaAbast" store:Type="Tables" />
+          <EntitySet Name="tblTarifaTabelas" EntityType="Self.tblTarifaTabelas" store:Type="Tables" />
+          <EntitySet Name="tblTarifaTabelasCategoria" EntityType="Self.tblTarifaTabelasCategoria" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblCadastro">
+          <Key>
+            <PropertyRef Name="CodConta" />
+          </Key>
+          <Property Name="CodConta" Type="Int32" Nullable="false" />
+          <Property Name="NumRes" Type="Int32" />
+          <Property Name="NumCom" Type="Int32" />
+          <Property Name="NumInd" Type="Int32" />
+          <Property Name="NumPub" Type="Int32" />
+          <Property Name="Hidrometro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TipoLigacao" Type="Int32" />
+          <Property Name="Piscina" Type="Int32" />
+          <Property Name="CaoBravo" Type="Int32" />
+          <Property Name="AlterouCad" Type="Int32" />
+          <Property Name="NumSoc" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblLeitura">
+          <Key>
+            <PropertyRef Name="Codleitura" />
+          </Key>
+          <Property Name="CodConta" Type="Int32" />
+          <Property Name="Mes1" Type="DateTime" Precision="3" />
+          <Property Name="Mes2" Type="DateTime" Precision="3" />
+          <Property Name="Mes3" Type="DateTime" Precision="3" />
+          <Property Name="Mes4" Type="DateTime" Precision="3" />
+          <Property Name="Mes5" Type="DateTime" Precision="3" />
+          <Property Name="Mes6" Type="DateTime" Precision="3" />
+          <Property Name="MesAnoAnt" Type="DateTime" Precision="3" />
+          <Property Name="CodOcor1" Type="Int32" />
+          <Property Name="CodOcor2" Type="Int32" />
+          <Property Name="CodOcor3" Type="Int32" />
+          <Property Name="CodOcor4" Type="Int32" />
+          <Property Name="CodOcor5" Type="Int32" />
+          <Property Name="CodOcor6" Type="Int32" />
+          <Property Name="CodOcorAnoAnt" Type="Int32" />
+          <Property Name="DiasConsumo1" Type="Int32" />
+          <Property Name="DiasConsumo2" Type="Int32" />
+          <Property Name="DiasConsumo3" Type="Int32" />
+          <Property Name="DiasConsumo4" Type="Int32" />
+          <Property Name="DiasConsumo5" Type="Int32" />
+          <Property Name="DiasConsumo6" Type="Int32" />
+          <Property Name="DiasConsAnoAnt" Type="Int32" />
+          <Property Name="Consumo1" Type="Int32" />
+          <Property Name="Consumo2" Type="Int32" />
+          <Property Name="Consumo3" Type="Int32" />
+          <Property Name="Consumo4" Type="Int32" />
+          <Property Name="Consumo5" Type="Int32" />
+          <Property Name="Consumo6" Type="Int32" />
+          <Property Name="ConsAnoAnt" Type="Int32" />
+          <Property Name="CodBanco" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CodAgencia" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="Insumo1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo1" Type="Double" />
+          <Property Name="Insumo2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo2" Type="Double" />
+          <Property Name="Insumo3" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo3" Type="Double" />
+          <Property Name="Insumo4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo4" Type="Double" />
+          <Property Name="Insumo5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo5" Type="Double" />
+          <Property Name="Insumo6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo6" Type="Double" />
+          <Property Name="Insumo7" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo7" Type="Double" />
+          <Property Name="Insumo8" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo8" Type="Double" />
+          <Property Name="Insumo9" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo9" Type="Double" />
+          <Property Name="Insumo10" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo10" Type="Double" />
+          <Property Name="Insumo11" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo11" Type="Double" />
+          <Property Name="Insumo12" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo12" Type="Double" />
+          <Property Name="Insumo13" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo13" Type="Double" />
+          <Property Name="Insumo14" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo14" Type="Double" />
+          <Property Name="Insumo15" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo15" Type="Double" />
+          <Property Name="Insumo16" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo16" Type="Double" />
+          <Property Name="Insumo17" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo17" Type="Double" />
+          <Property Name="Insumo18" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo18" Type="Double" />
+          <Property Name="Insumo19" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo19" Type="Double" />
+          <Property Name="Insumo20" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="ValorInsumo20" Type="Double" />
+          <Property Name="NumRes" Type="Int32" />
+          <Property Name="NumCom" Type="Int32" />
+          <Property Name="NumInd" Type="Int32" />
+          <Property Name="NumPub" Type="Int32" />
+          <Property Name="DataVencto" Type="DateTime" Precision="3" />
+          <Property Name="Ref" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="MesFat" Type="DateTime" Precision="3" />
+          <Property Name="Hidrometro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NomeCliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Endereco" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="EnderecoEnt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BairroEnt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CidadeEnt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LeituraAnt" Type="Int32" />
+          <Property Name="LeituraAtual" Type="Int32" />
+          <Property Name="DiasConsAtual" Type="Int32" />
+          <Property Name="ConsumoAtual" Type="Int32" />
+          <Property Name="DataLeitura" Type="DateTime" Precision="3" />
+          <Property Name="CodOcorAtual" Type="Int32" />
+          <Property Name="Media" Type="Int32" />
+          <Property Name="ExisteDebAnt" Type="Int32" />
+          <Property Name="ObterMedia" Type="Int32" />
+          <Property Name="DescOcor" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="MostraNaConta" Type="Int32" />
+          <Property Name="CodigoBar1" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoBar2" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoBar3" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoBar4" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="DigitoVer1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="DigitoVer2" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="DigitoVer3" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="DigitoVer4" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ValorTotal" Type="Double" />
+          <Property Name="CodLogra" Type="Int32" />
+          <Property Name="CodLograEnt" Type="Int32" />
+          <Property Name="ContasEmAberto" Type="Int32" />
+          <Property Name="Vazamento" Type="Int32" />
+          <Property Name="Faturado" Type="Int32" />
+          <Property Name="HidroMovto" Type="Int32" />
+          <Property Name="Conferida" Type="Int32" />
+          <Property Name="NumPag" Type="Int32" />
+          <Property Name="PagAtual" Type="Int32" />
+          <Property Name="Codleitura" Type="Int32" Nullable="false" />
+          <Property Name="CodNotificacao" Type="Int32" />
+          <Property Name="MensagemConta" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Face" Type="Int32" />
+          <Property Name="Piscina" Type="Int32" />
+          <Property Name="CaoBravo" Type="Int32" />
+          <Property Name="TipoLigacao" Type="Int32" />
+          <Property Name="CodRegiaoRota" Type="Int32" />
+          <Property Name="SeqLeiturista" Type="Int32" />
+          <Property Name="SeqEndereco" Type="Int32" />
+          <Property Name="FezLeitura" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="QtdeEdit" Type="Int32" />
+          <Property Name="HistLeitura" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+          <Property Name="Numero" Type="Int32" />
+          <Property Name="Complemento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="DataImpressao" Type="DateTime" Precision="3" />
+          <Property Name="DataEntrega" Type="DateTime" Precision="3" />
+          <Property Name="MediaMenor" Type="Int32" />
+          <Property Name="MediaMaior" Type="Int32" />
+          <Property Name="TemDivida" Type="Int32" />
+          <Property Name="QtdeRes" Type="Int32" />
+          <Property Name="MultiRes" Type="Int32" />
+          <Property Name="ConsumoMinimo" Type="Int32" />
+          <Property Name="CodTpCliente" Type="Int32" />
+          <Property Name="CodUsuario" Type="Int32" />
+          <Property Name="DataLeituraAnt" Type="DateTime" Precision="3" />
+          <Property Name="Pendente" Type="Int32" />
+          <Property Name="TaxaOutros" Type="Double" />
+          <Property Name="AlertaCodOcor" Type="Int32" />
+          <Property Name="Divida" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AlterouCad" Type="Int32" />
+          <Property Name="HidroVirou" Type="Int32" />
+          <Property Name="Obs" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="NumSoc" Type="Int32" />
+          <Property Name="ConsResidual" Type="Int32" />
+          <Property Name="DiasResidual" Type="Int32" />
+          <Property Name="CodTabela" Type="Int32" />
+          <Property Name="Mes7" Type="DateTime" Precision="3" />
+          <Property Name="Mes8" Type="DateTime" Precision="3" />
+          <Property Name="Mes9" Type="DateTime" Precision="3" />
+          <Property Name="Mes10" Type="DateTime" Precision="3" />
+          <Property Name="Mes11" Type="DateTime" Precision="3" />
+          <Property Name="Mes12" Type="DateTime" Precision="3" />
+          <Property Name="CodOcor7" Type="Int32" />
+          <Property Name="CodOcor8" Type="Int32" />
+          <Property Name="CodOcor9" Type="Int32" />
+          <Property Name="CodOcor10" Type="Int32" />
+          <Property Name="CodOcor11" Type="Int32" />
+          <Property Name="CodOcor12" Type="Int32" />
+          <Property Name="DiasConsumo7" Type="Int32" />
+          <Property Name="DiasConsumo8" Type="Int32" />
+          <Property Name="DiasConsumo9" Type="Int32" />
+          <Property Name="DiasConsumo10" Type="Int32" />
+          <Property Name="DiasConsumo11" Type="Int32" />
+          <Property Name="DiasConsumo12" Type="Int32" />
+          <Property Name="Consumo7" Type="Int32" />
+          <Property Name="Consumo8" Type="Int32" />
+          <Property Name="Consumo9" Type="Int32" />
+          <Property Name="Consumo10" Type="Int32" />
+          <Property Name="Consumo11" Type="Int32" />
+          <Property Name="Consumo12" Type="Int32" />
+          <Property Name="CEP" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="QuitacaoAnual" Type="Int32" />
+          <Property Name="Vazao" Type="Double" Nullable="true" />
+          <Property Name="DataInstalacao" Type="DateTime" Nullable="true" Precision="3" />
+          <Property Name="Situacao" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="Notificacoes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RespFinanc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblLog">
+          <Key>
+            <PropertyRef Name="CodReg" />
+          </Key>
+          <Property Name="DataSistema" Type="DateTime" Precision="3" />
+          <Property Name="CodReg" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Versao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblOcor">
+          <Key>
+            <PropertyRef Name="CodOcor" />
+          </Key>
+          <Property Name="CodOcor" Type="Int32" Nullable="false" />
+          <Property Name="DescOcor" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="ObterMedia" Type="Int16" />
+          <Property Name="MostraNaConta" Type="Int16" />
+          <Property Name="EvitaFreq" Type="Int16" />
+          <Property Name="ExigeLeitura" Type="Int16" />
+        </EntityType>
+        <EntityType Name="tblRota">
+          <Key>
+            <PropertyRef Name="CodRegiaoRota" />
+          </Key>
+          <Property Name="CodRegiaoRota" Type="Int32" Nullable="false" />
+          <Property Name="DescRota" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="TotContas" Type="Int32" />
+          <Property Name="CodUsuario" Type="Int32" />
+          <Property Name="NomeUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MesFat" Type="DateTime" Precision="3" />
+          <Property Name="DataLiberacao" Type="DateTime" Precision="3" />
+          <Property Name="MacAddress" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="ProximaLeitura" Type="DateTime" Precision="3" />
+          <Property Name="PosIniImpressao" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblSistemaAbast">
+          <Key>
+            <PropertyRef Name="CodRegiaoRota" />
+          </Key>
+          <Property Name="CodRegiaoRota" Type="Int32" Nullable="false" />
+          <Property Name="Mesfat" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CodSistemaAbast" Type="Int32" Nullable="false" />
+          <Property Name="DataInicial" Type="DateTime" Precision="3" />
+          <Property Name="DataFinal" Type="DateTime" Precision="3" />
+          <Property Name="TurbidezUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TurbidezValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TurbidezValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TurbidezAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TurbidezAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CorUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CorValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CorValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CorAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CorAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PHUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PHValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PHAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PHValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PHAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CloroUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CloroValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CloroValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CloroAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CloroAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ColiformesUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ColiformesValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ColiformesValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ColiformesAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ColiformesAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FluorUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FluorValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FluorAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FluorValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="FluorAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblTarifaTabelas">
+          <Key>
+            <PropertyRef Name="CodTabela" />
+          </Key>
+          <Property Name="CodTabela" Type="Int32" Nullable="false" />
+          <Property Name="DescTabela" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataVigor" Type="DateTime" Precision="3" />
+          <Property Name="CodTabelaOrigem" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblTarifaTabelasCategoria">
+          <Key>
+            <PropertyRef Name="CodTabela" />
+            <PropertyRef Name="Faixa" />
+          </Key>
+          <Property Name="CodTabela" Type="Int32" Nullable="false" />
+          <Property Name="Faixa" Type="Int32" Nullable="false" />
+          <Property Name="AguaRes" Type="Double" />
+          <Property Name="EsgotoRes" Type="Double" />
+          <Property Name="ValorFaixaRes" Type="Double" />
+          <Property Name="ValorFaixaResEsg" Type="Double" />
+          <Property Name="AguaCom" Type="Double" />
+          <Property Name="EsgotoCom" Type="Double" />
+          <Property Name="ValorFaixaCom" Type="Double" />
+          <Property Name="ValorFaixaComEsg" Type="Double" />
+          <Property Name="AguaInd" Type="Double" />
+          <Property Name="EsgotoInd" Type="Double" />
+          <Property Name="ValorFaixaInd" Type="Double" />
+          <Property Name="ValorFaixaIndEsg" Type="Double" />
+          <Property Name="AguaPub" Type="Double" />
+          <Property Name="EsgotoPub" Type="Double" />
+          <Property Name="ValorFaixaPub" Type="Double" />
+          <Property Name="ValorFaixaPubEsg" Type="Double" />
+          <Property Name="AguaSoc" Type="Double" />
+          <Property Name="EsgotoSoc" Type="Double" />
+          <Property Name="ValorFaixaSoc" Type="Double" />
+          <Property Name="ValorFaixaSocEsg" Type="Double" />
+          <Property Name="AguaResAnt" Type="Double" />
+          <Property Name="EsgotoResAnt" Type="Double" />
+          <Property Name="ValorFaixaResAnt" Type="Double" />
+          <Property Name="ValorFaixaResEsgAnt" Type="Double" />
+          <Property Name="AguaComAnt" Type="Double" />
+          <Property Name="EsgotoComAnt" Type="Double" />
+          <Property Name="ValorFaixaComAnt" Type="Double" />
+          <Property Name="ValorFaixaComEsgAnt" Type="Double" />
+          <Property Name="AguaIndAnt" Type="Double" />
+          <Property Name="EsgotoIndAnt" Type="Double" />
+          <Property Name="ValorFaixaIndAnt" Type="Double" />
+          <Property Name="ValorFaixaIndEsgAnt" Type="Double" />
+          <Property Name="AguaPubAnt" Type="Double" />
+          <Property Name="EsgotoPubAnt" Type="Double" />
+          <Property Name="ValorFaixaPubAnt" Type="Double" />
+          <Property Name="ValorFaixaPubEsgAnt" Type="Double" />
+          <Property Name="AguaSocAnt" Type="Double" />
+          <Property Name="EsgotoSocAnt" Type="Double" />
+          <Property Name="ValorFaixaSocAnt" Type="Double" />
+          <Property Name="ValorFaixaSocEsgAnt" Type="Double" />
+        </EntityType>
+        <EntityContainer Name="HidroMobileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblCadastro" EntityType="Self.tblCadastro" />
+          <EntitySet Name="tblLeitura" EntityType="Self.tblLeitura" />
+          <EntitySet Name="tblLog" EntityType="Self.tblLog" />
+          <EntitySet Name="tblOcor" EntityType="Self.tblOcor" />
+          <EntitySet Name="tblRota" EntityType="Self.tblRota" />
+          <EntitySet Name="tblSistemaAbast" EntityType="Self.tblSistemaAbast" />
+          <EntitySet Name="tblTarifaTabelas" EntityType="Self.tblTarifaTabelas" />
+          <EntitySet Name="tblTarifaTabelasCategoria" EntityType="Self.tblTarifaTabelasCategoria" />
+          <EntitySet Name="tblEncargos" EntityType="Model.tblEncargos" />
+          <EntitySet Name="tblLogra" EntityType="Model.tblLogra" />
+          <EntitySet Name="tblMensagem" EntityType="Model.tblMensagem" />
+          <EntitySet Name="tblPosicao" EntityType="Model.tblPosicao" />
+        </EntityContainer>
+        <EntityType Name="tblEncargos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Juros" Type="Double" />
+          <Property Name="Multa" Type="Double" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblLogra">
+          <Key>
+            <PropertyRef Name="CodLogra" />
+          </Key>
+          <Property Name="CodLogra" Type="Int32" Nullable="false" />
+          <Property Name="NomeLogra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotContas" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tblMensagem">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="Mensagem" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblPosicao">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="RegAtual" Type="Int32" />
+          <Property Name="RegAtualLeit" Type="Int32" />
+          <Property Name="CodRotaAtual" Type="Int32" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="HidroMobileEntities">
+          <EntitySetMapping Name="tblCadastro">
+            <EntityTypeMapping TypeName="Model.tblCadastro">
+              <MappingFragment StoreEntitySet="tblCadastro">
+                <ScalarProperty Name="CodConta" ColumnName="CodConta" />
+                <ScalarProperty Name="NumRes" ColumnName="NumRes" />
+                <ScalarProperty Name="NumCom" ColumnName="NumCom" />
+                <ScalarProperty Name="NumInd" ColumnName="NumInd" />
+                <ScalarProperty Name="NumPub" ColumnName="NumPub" />
+                <ScalarProperty Name="Hidrometro" ColumnName="Hidrometro" />
+                <ScalarProperty Name="TipoLigacao" ColumnName="TipoLigacao" />
+                <ScalarProperty Name="Piscina" ColumnName="Piscina" />
+                <ScalarProperty Name="CaoBravo" ColumnName="CaoBravo" />
+                <ScalarProperty Name="AlterouCad" ColumnName="AlterouCad" />
+                <ScalarProperty Name="NumSoc" ColumnName="NumSoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLeitura">
+            <EntityTypeMapping TypeName="Model.tblLeitura">
+              <MappingFragment StoreEntitySet="tblLeitura">
+                <ScalarProperty Name="RespFinanc" ColumnName="RespFinanc" />
+                <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+                <ScalarProperty Name="CodConta" ColumnName="CodConta" />
+                <ScalarProperty Name="Mes1" ColumnName="Mes1" />
+                <ScalarProperty Name="Mes2" ColumnName="Mes2" />
+                <ScalarProperty Name="Mes3" ColumnName="Mes3" />
+                <ScalarProperty Name="Mes4" ColumnName="Mes4" />
+                <ScalarProperty Name="Mes5" ColumnName="Mes5" />
+                <ScalarProperty Name="Mes6" ColumnName="Mes6" />
+                <ScalarProperty Name="MesAnoAnt" ColumnName="MesAnoAnt" />
+                <ScalarProperty Name="CodOcor1" ColumnName="CodOcor1" />
+                <ScalarProperty Name="CodOcor2" ColumnName="CodOcor2" />
+                <ScalarProperty Name="CodOcor3" ColumnName="CodOcor3" />
+                <ScalarProperty Name="CodOcor4" ColumnName="CodOcor4" />
+                <ScalarProperty Name="CodOcor5" ColumnName="CodOcor5" />
+                <ScalarProperty Name="CodOcor6" ColumnName="CodOcor6" />
+                <ScalarProperty Name="CodOcorAnoAnt" ColumnName="CodOcorAnoAnt" />
+                <ScalarProperty Name="DiasConsumo1" ColumnName="DiasConsumo1" />
+                <ScalarProperty Name="DiasConsumo2" ColumnName="DiasConsumo2" />
+                <ScalarProperty Name="DiasConsumo3" ColumnName="DiasConsumo3" />
+                <ScalarProperty Name="DiasConsumo4" ColumnName="DiasConsumo4" />
+                <ScalarProperty Name="DiasConsumo5" ColumnName="DiasConsumo5" />
+                <ScalarProperty Name="DiasConsumo6" ColumnName="DiasConsumo6" />
+                <ScalarProperty Name="DiasConsAnoAnt" ColumnName="DiasConsAnoAnt" />
+                <ScalarProperty Name="Consumo1" ColumnName="Consumo1" />
+                <ScalarProperty Name="Consumo2" ColumnName="Consumo2" />
+                <ScalarProperty Name="Consumo3" ColumnName="Consumo3" />
+                <ScalarProperty Name="Consumo4" ColumnName="Consumo4" />
+                <ScalarProperty Name="Consumo5" ColumnName="Consumo5" />
+                <ScalarProperty Name="Consumo6" ColumnName="Consumo6" />
+                <ScalarProperty Name="ConsAnoAnt" ColumnName="ConsAnoAnt" />
+                <ScalarProperty Name="CodBanco" ColumnName="CodBanco" />
+                <ScalarProperty Name="CodAgencia" ColumnName="CodAgencia" />
+                <ScalarProperty Name="Insumo1" ColumnName="Insumo1" />
+                <ScalarProperty Name="ValorInsumo1" ColumnName="ValorInsumo1" />
+                <ScalarProperty Name="Insumo2" ColumnName="Insumo2" />
+                <ScalarProperty Name="ValorInsumo2" ColumnName="ValorInsumo2" />
+                <ScalarProperty Name="Insumo3" ColumnName="Insumo3" />
+                <ScalarProperty Name="ValorInsumo3" ColumnName="ValorInsumo3" />
+                <ScalarProperty Name="Insumo4" ColumnName="Insumo4" />
+                <ScalarProperty Name="ValorInsumo4" ColumnName="ValorInsumo4" />
+                <ScalarProperty Name="Insumo5" ColumnName="Insumo5" />
+                <ScalarProperty Name="ValorInsumo5" ColumnName="ValorInsumo5" />
+                <ScalarProperty Name="Insumo6" ColumnName="Insumo6" />
+                <ScalarProperty Name="ValorInsumo6" ColumnName="ValorInsumo6" />
+                <ScalarProperty Name="Insumo7" ColumnName="Insumo7" />
+                <ScalarProperty Name="ValorInsumo7" ColumnName="ValorInsumo7" />
+                <ScalarProperty Name="Insumo8" ColumnName="Insumo8" />
+                <ScalarProperty Name="ValorInsumo8" ColumnName="ValorInsumo8" />
+                <ScalarProperty Name="Insumo9" ColumnName="Insumo9" />
+                <ScalarProperty Name="ValorInsumo9" ColumnName="ValorInsumo9" />
+                <ScalarProperty Name="Insumo10" ColumnName="Insumo10" />
+                <ScalarProperty Name="ValorInsumo10" ColumnName="ValorInsumo10" />
+                <ScalarProperty Name="Insumo11" ColumnName="Insumo11" />
+                <ScalarProperty Name="ValorInsumo11" ColumnName="ValorInsumo11" />
+                <ScalarProperty Name="Insumo12" ColumnName="Insumo12" />
+                <ScalarProperty Name="ValorInsumo12" ColumnName="ValorInsumo12" />
+                <ScalarProperty Name="Insumo13" ColumnName="Insumo13" />
+                <ScalarProperty Name="ValorInsumo13" ColumnName="ValorInsumo13" />
+                <ScalarProperty Name="Insumo14" ColumnName="Insumo14" />
+                <ScalarProperty Name="ValorInsumo14" ColumnName="ValorInsumo14" />
+                <ScalarProperty Name="Insumo15" ColumnName="Insumo15" />
+                <ScalarProperty Name="ValorInsumo15" ColumnName="ValorInsumo15" />
+                <ScalarProperty Name="Insumo16" ColumnName="Insumo16" />
+                <ScalarProperty Name="ValorInsumo16" ColumnName="ValorInsumo16" />
+                <ScalarProperty Name="Insumo17" ColumnName="Insumo17" />
+                <ScalarProperty Name="ValorInsumo17" ColumnName="ValorInsumo17" />
+                <ScalarProperty Name="Insumo18" ColumnName="Insumo18" />
+                <ScalarProperty Name="ValorInsumo18" ColumnName="ValorInsumo18" />
+                <ScalarProperty Name="Insumo19" ColumnName="Insumo19" />
+                <ScalarProperty Name="ValorInsumo19" ColumnName="ValorInsumo19" />
+                <ScalarProperty Name="Insumo20" ColumnName="Insumo20" />
+                <ScalarProperty Name="ValorInsumo20" ColumnName="ValorInsumo20" />
+                <ScalarProperty Name="NumRes" ColumnName="NumRes" />
+                <ScalarProperty Name="NumCom" ColumnName="NumCom" />
+                <ScalarProperty Name="NumInd" ColumnName="NumInd" />
+                <ScalarProperty Name="NumPub" ColumnName="NumPub" />
+                <ScalarProperty Name="DataVencto" ColumnName="DataVencto" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="MesFat" ColumnName="MesFat" />
+                <ScalarProperty Name="Hidrometro" ColumnName="Hidrometro" />
+                <ScalarProperty Name="NomeCliente" ColumnName="NomeCliente" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="EnderecoEnt" ColumnName="EnderecoEnt" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="BairroEnt" ColumnName="BairroEnt" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="CidadeEnt" ColumnName="CidadeEnt" />
+                <ScalarProperty Name="LeituraAnt" ColumnName="LeituraAnt" />
+                <ScalarProperty Name="LeituraAtual" ColumnName="LeituraAtual" />
+                <ScalarProperty Name="DiasConsAtual" ColumnName="DiasConsAtual" />
+                <ScalarProperty Name="ConsumoAtual" ColumnName="ConsumoAtual" />
+                <ScalarProperty Name="DataLeitura" ColumnName="DataLeitura" />
+                <ScalarProperty Name="CodOcorAtual" ColumnName="CodOcorAtual" />
+                <ScalarProperty Name="Media" ColumnName="Media" />
+                <ScalarProperty Name="ExisteDebAnt" ColumnName="ExisteDebAnt" />
+                <ScalarProperty Name="ObterMedia" ColumnName="ObterMedia" />
+                <ScalarProperty Name="DescOcor" ColumnName="DescOcor" />
+                <ScalarProperty Name="MostraNaConta" ColumnName="MostraNaConta" />
+                <ScalarProperty Name="CodigoBar1" ColumnName="CodigoBar1" />
+                <ScalarProperty Name="CodigoBar2" ColumnName="CodigoBar2" />
+                <ScalarProperty Name="CodigoBar3" ColumnName="CodigoBar3" />
+                <ScalarProperty Name="CodigoBar4" ColumnName="CodigoBar4" />
+                <ScalarProperty Name="DigitoVer1" ColumnName="DigitoVer1" />
+                <ScalarProperty Name="DigitoVer2" ColumnName="DigitoVer2" />
+                <ScalarProperty Name="DigitoVer3" ColumnName="DigitoVer3" />
+                <ScalarProperty Name="DigitoVer4" ColumnName="DigitoVer4" />
+                <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+                <ScalarProperty Name="CodLogra" ColumnName="CodLogra" />
+                <ScalarProperty Name="CodLograEnt" ColumnName="CodLograEnt" />
+                <ScalarProperty Name="ContasEmAberto" ColumnName="ContasEmAberto" />
+                <ScalarProperty Name="Vazamento" ColumnName="Vazamento" />
+                <ScalarProperty Name="Faturado" ColumnName="Faturado" />
+                <ScalarProperty Name="HidroMovto" ColumnName="HidroMovto" />
+                <ScalarProperty Name="Conferida" ColumnName="Conferida" />
+                <ScalarProperty Name="NumPag" ColumnName="NumPag" />
+                <ScalarProperty Name="PagAtual" ColumnName="PagAtual" />
+                <ScalarProperty Name="Codleitura" ColumnName="Codleitura" />
+                <ScalarProperty Name="CodNotificacao" ColumnName="CodNotificacao" />
+                <ScalarProperty Name="MensagemConta" ColumnName="MensagemConta" />
+                <ScalarProperty Name="Face" ColumnName="Face" />
+                <ScalarProperty Name="Piscina" ColumnName="Piscina" />
+                <ScalarProperty Name="CaoBravo" ColumnName="CaoBravo" />
+                <ScalarProperty Name="TipoLigacao" ColumnName="TipoLigacao" />
+                <ScalarProperty Name="CodRegiaoRota" ColumnName="CodRegiaoRota" />
+                <ScalarProperty Name="SeqLeiturista" ColumnName="SeqLeiturista" />
+                <ScalarProperty Name="SeqEndereco" ColumnName="SeqEndereco" />
+                <ScalarProperty Name="FezLeitura" ColumnName="FezLeitura" />
+                <ScalarProperty Name="QtdeEdit" ColumnName="QtdeEdit" />
+                <ScalarProperty Name="HistLeitura" ColumnName="HistLeitura" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+                <ScalarProperty Name="DataImpressao" ColumnName="DataImpressao" />
+                <ScalarProperty Name="DataEntrega" ColumnName="DataEntrega" />
+                <ScalarProperty Name="MediaMenor" ColumnName="MediaMenor" />
+                <ScalarProperty Name="MediaMaior" ColumnName="MediaMaior" />
+                <ScalarProperty Name="TemDivida" ColumnName="TemDivida" />
+                <ScalarProperty Name="QtdeRes" ColumnName="QtdeRes" />
+                <ScalarProperty Name="MultiRes" ColumnName="MultiRes" />
+                <ScalarProperty Name="ConsumoMinimo" ColumnName="ConsumoMinimo" />
+                <ScalarProperty Name="CodTpCliente" ColumnName="CodTpCliente" />
+                <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+                <ScalarProperty Name="DataLeituraAnt" ColumnName="DataLeituraAnt" />
+                <ScalarProperty Name="Pendente" ColumnName="Pendente" />
+                <ScalarProperty Name="TaxaOutros" ColumnName="TaxaOutros" />
+                <ScalarProperty Name="AlertaCodOcor" ColumnName="AlertaCodOcor" />
+                <ScalarProperty Name="Divida" ColumnName="Divida" />
+                <ScalarProperty Name="AlterouCad" ColumnName="AlterouCad" />
+                <ScalarProperty Name="HidroVirou" ColumnName="HidroVirou" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="NumSoc" ColumnName="NumSoc" />
+                <ScalarProperty Name="ConsResidual" ColumnName="ConsResidual" />
+                <ScalarProperty Name="DiasResidual" ColumnName="DiasResidual" />
+                <ScalarProperty Name="CodTabela" ColumnName="CodTabela" />
+                <ScalarProperty Name="Mes7" ColumnName="Mes7" />
+                <ScalarProperty Name="Mes8" ColumnName="Mes8" />
+                <ScalarProperty Name="Mes9" ColumnName="Mes9" />
+                <ScalarProperty Name="Mes10" ColumnName="Mes10" />
+                <ScalarProperty Name="Mes11" ColumnName="Mes11" />
+                <ScalarProperty Name="Mes12" ColumnName="Mes12" />
+                <ScalarProperty Name="CodOcor7" ColumnName="CodOcor7" />
+                <ScalarProperty Name="CodOcor8" ColumnName="CodOcor8" />
+                <ScalarProperty Name="CodOcor9" ColumnName="CodOcor9" />
+                <ScalarProperty Name="CodOcor10" ColumnName="CodOcor10" />
+                <ScalarProperty Name="CodOcor11" ColumnName="CodOcor11" />
+                <ScalarProperty Name="CodOcor12" ColumnName="CodOcor12" />
+                <ScalarProperty Name="DiasConsumo7" ColumnName="DiasConsumo7" />
+                <ScalarProperty Name="DiasConsumo8" ColumnName="DiasConsumo8" />
+                <ScalarProperty Name="DiasConsumo9" ColumnName="DiasConsumo9" />
+                <ScalarProperty Name="DiasConsumo10" ColumnName="DiasConsumo10" />
+                <ScalarProperty Name="DiasConsumo11" ColumnName="DiasConsumo11" />
+                <ScalarProperty Name="DiasConsumo12" ColumnName="DiasConsumo12" />
+                <ScalarProperty Name="Consumo7" ColumnName="Consumo7" />
+                <ScalarProperty Name="Consumo8" ColumnName="Consumo8" />
+                <ScalarProperty Name="Consumo9" ColumnName="Consumo9" />
+                <ScalarProperty Name="Consumo10" ColumnName="Consumo10" />
+                <ScalarProperty Name="Consumo11" ColumnName="Consumo11" />
+                <ScalarProperty Name="Consumo12" ColumnName="Consumo12" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="QuitacaoAnual" ColumnName="QuitacaoAnual" />
+                <ScalarProperty Name="Vazao" ColumnName="Vazao" />	
+                <ScalarProperty Name="DataInstalacao" ColumnName="DataInstalacao" />	
+				<ScalarProperty Name="Notificacoes" ColumnName="Notificacoes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLog">
+            <EntityTypeMapping TypeName="Model.tblLog">
+              <MappingFragment StoreEntitySet="tblLog">
+                <ScalarProperty Name="DataSistema" ColumnName="DataSistema" />
+                <ScalarProperty Name="CodReg" ColumnName="CodReg" />
+                <ScalarProperty Name="Versao" ColumnName="Versao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblOcor">
+            <EntityTypeMapping TypeName="Model.tblOcor">
+              <MappingFragment StoreEntitySet="tblOcor">
+                <ScalarProperty Name="CodOcor" ColumnName="CodOcor" />
+                <ScalarProperty Name="DescOcor" ColumnName="DescOcor" />
+                <ScalarProperty Name="ObterMedia" ColumnName="ObterMedia" />
+                <ScalarProperty Name="MostraNaConta" ColumnName="MostraNaConta" />
+                <ScalarProperty Name="EvitaFreq" ColumnName="EvitaFreq" />
+                <ScalarProperty Name="ExigeLeitura" ColumnName="ExigeLeitura" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRota">
+            <EntityTypeMapping TypeName="Model.tblRota">
+              <MappingFragment StoreEntitySet="tblRota">
+                <ScalarProperty Name="CodRegiaoRota" ColumnName="CodRegiaoRota" />
+                <ScalarProperty Name="DescRota" ColumnName="DescRota" />
+                <ScalarProperty Name="TotContas" ColumnName="TotContas" />
+                <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+                <ScalarProperty Name="NomeUsuario" ColumnName="NomeUsuario" />
+                <ScalarProperty Name="MesFat" ColumnName="MesFat" />
+                <ScalarProperty Name="DataLiberacao" ColumnName="DataLiberacao" />
+                <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+                <ScalarProperty Name="ProximaLeitura" ColumnName="ProximaLeitura" />
+                <ScalarProperty Name="PosIniImpressao" ColumnName="PosIniImpressao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSistemaAbast">
+            <EntityTypeMapping TypeName="Model.tblSistemaAbast">
+              <MappingFragment StoreEntitySet="tblSistemaAbast">
+                <ScalarProperty Name="FluorAmostrasPadrao" ColumnName="FluorAmostrasPadrao" />
+                <ScalarProperty Name="FluorValorMedioDetectado" ColumnName="FluorValorMedioDetectado" />
+                <ScalarProperty Name="FluorAnalisadas" ColumnName="FluorAnalisadas" />
+                <ScalarProperty Name="FluorValorMaxPermitido" ColumnName="FluorValorMaxPermitido" />
+                <ScalarProperty Name="FluorUnidade" ColumnName="FluorUnidade" />
+                <ScalarProperty Name="ColiformesAmostrasPadrao" ColumnName="ColiformesAmostrasPadrao" />
+                <ScalarProperty Name="ColiformesValorMedioDetectado" ColumnName="ColiformesValorMedioDetectado" />
+				<ScalarProperty Name="ColiformesAnalisadas" ColumnName="ColiformesAnalisadas" />				
+                <ScalarProperty Name="ColiformesValorMaxPermitido" ColumnName="ColiformesValorMaxPermitido" />
+                <ScalarProperty Name="ColiformesUnidade" ColumnName="ColiformesUnidade" />				
+                <ScalarProperty Name="CloroAmostrasPadrao" ColumnName="CloroAmostrasPadrao" />
+                <ScalarProperty Name="CloroValorMedioDetectado" ColumnName="CloroValorMedioDetectado" />
+				<ScalarProperty Name="CloroAnalisadas" ColumnName="CloroAnalisadas" />
+                <ScalarProperty Name="CloroValorMaxPermitido" ColumnName="CloroValorMaxPermitido" />
+                <ScalarProperty Name="CloroUnidade" ColumnName="CloroUnidade" />
+                <ScalarProperty Name="PHAmostrasPadrao" ColumnName="PHAmostrasPadrao" />
+                <ScalarProperty Name="PHValorMedioDetectado" ColumnName="PHValorMedioDetectado" />
+                <ScalarProperty Name="PHAnalisadas" ColumnName="PHAnalisadas" />
+                <ScalarProperty Name="PHValorMaxPermitido" ColumnName="PHValorMaxPermitido" />
+                <ScalarProperty Name="PHUnidade" ColumnName="PHUnidade" />
+                <ScalarProperty Name="CorAmostrasPadrao" ColumnName="CorAmostrasPadrao" />
+                <ScalarProperty Name="CorValorMedioDetectado" ColumnName="CorValorMedioDetectado" />
+				<ScalarProperty Name="CorAnalisadas" ColumnName="CorAnalisadas" />
+                <ScalarProperty Name="CorValorMaxPermitido" ColumnName="CorValorMaxPermitido" />
+                <ScalarProperty Name="CorUnidade" ColumnName="CorUnidade" />
+                <ScalarProperty Name="TurbidezAmostrasPadrao" ColumnName="TurbidezAmostrasPadrao" />
+                <ScalarProperty Name="TurbidezValorMedioDetectado" ColumnName="TurbidezValorMedioDetectado" />		
+				<ScalarProperty Name="TurbidezAnalisadas" ColumnName="TurbidezAnalisadas" />				
+                <ScalarProperty Name="TurbidezValorMaxPermitido" ColumnName="TurbidezValorMaxPermitido" />
+                <ScalarProperty Name="TurbidezUnidade" ColumnName="TurbidezUnidade" />
+                <ScalarProperty Name="DataFinal" ColumnName="DataFinal" />
+                <ScalarProperty Name="DataInicial" ColumnName="DataInicial" />
+                <ScalarProperty Name="CodSistemaAbast" ColumnName="CodSistemaAbast" />
+                <ScalarProperty Name="Mesfat" ColumnName="Mesfat" />
+                <ScalarProperty Name="CodRegiaoRota" ColumnName="CodRegiaoRota" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTarifaTabelas">
+            <EntityTypeMapping TypeName="Model.tblTarifaTabelas">
+              <MappingFragment StoreEntitySet="tblTarifaTabelas">
+                <ScalarProperty Name="CodTabela" ColumnName="CodTabela" />
+                <ScalarProperty Name="DescTabela" ColumnName="DescTabela" />
+                <ScalarProperty Name="DataVigor" ColumnName="DataVigor" />
+                <ScalarProperty Name="CodTabelaOrigem" ColumnName="CodTabelaOrigem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblTarifaTabelasCategoria">
+            <EntityTypeMapping TypeName="Model.tblTarifaTabelasCategoria">
+              <MappingFragment StoreEntitySet="tblTarifaTabelasCategoria">
+                <ScalarProperty Name="CodTabela" ColumnName="CodTabela" />
+                <ScalarProperty Name="Faixa" ColumnName="Faixa" />
+                <ScalarProperty Name="AguaRes" ColumnName="AguaRes" />
+                <ScalarProperty Name="EsgotoRes" ColumnName="EsgotoRes" />
+                <ScalarProperty Name="ValorFaixaRes" ColumnName="ValorFaixaRes" />
+                <ScalarProperty Name="ValorFaixaResEsg" ColumnName="ValorFaixaResEsg" />
+                <ScalarProperty Name="AguaCom" ColumnName="AguaCom" />
+                <ScalarProperty Name="EsgotoCom" ColumnName="EsgotoCom" />
+                <ScalarProperty Name="ValorFaixaCom" ColumnName="ValorFaixaCom" />
+                <ScalarProperty Name="ValorFaixaComEsg" ColumnName="ValorFaixaComEsg" />
+                <ScalarProperty Name="AguaInd" ColumnName="AguaInd" />
+                <ScalarProperty Name="EsgotoInd" ColumnName="EsgotoInd" />
+                <ScalarProperty Name="ValorFaixaInd" ColumnName="ValorFaixaInd" />
+                <ScalarProperty Name="ValorFaixaIndEsg" ColumnName="ValorFaixaIndEsg" />
+                <ScalarProperty Name="AguaPub" ColumnName="AguaPub" />
+                <ScalarProperty Name="EsgotoPub" ColumnName="EsgotoPub" />
+                <ScalarProperty Name="ValorFaixaPub" ColumnName="ValorFaixaPub" />
+                <ScalarProperty Name="ValorFaixaPubEsg" ColumnName="ValorFaixaPubEsg" />
+                <ScalarProperty Name="AguaSoc" ColumnName="AguaSoc" />
+                <ScalarProperty Name="EsgotoSoc" ColumnName="EsgotoSoc" />
+                <ScalarProperty Name="ValorFaixaSoc" ColumnName="ValorFaixaSoc" />
+                <ScalarProperty Name="ValorFaixaSocEsg" ColumnName="ValorFaixaSocEsg" />
+                <ScalarProperty Name="AguaResAnt" ColumnName="AguaResAnt" />
+                <ScalarProperty Name="EsgotoResAnt" ColumnName="EsgotoResAnt" />
+                <ScalarProperty Name="ValorFaixaResAnt" ColumnName="ValorFaixaResAnt" />
+                <ScalarProperty Name="ValorFaixaResEsgAnt" ColumnName="ValorFaixaResEsgAnt" />
+                <ScalarProperty Name="AguaComAnt" ColumnName="AguaComAnt" />
+                <ScalarProperty Name="EsgotoComAnt" ColumnName="EsgotoComAnt" />
+                <ScalarProperty Name="ValorFaixaComAnt" ColumnName="ValorFaixaComAnt" />
+                <ScalarProperty Name="ValorFaixaComEsgAnt" ColumnName="ValorFaixaComEsgAnt" />
+                <ScalarProperty Name="AguaIndAnt" ColumnName="AguaIndAnt" />
+                <ScalarProperty Name="EsgotoIndAnt" ColumnName="EsgotoIndAnt" />
+                <ScalarProperty Name="ValorFaixaIndAnt" ColumnName="ValorFaixaIndAnt" />
+                <ScalarProperty Name="ValorFaixaIndEsgAnt" ColumnName="ValorFaixaIndEsgAnt" />
+                <ScalarProperty Name="AguaPubAnt" ColumnName="AguaPubAnt" />
+                <ScalarProperty Name="EsgotoPubAnt" ColumnName="EsgotoPubAnt" />
+                <ScalarProperty Name="ValorFaixaPubAnt" ColumnName="ValorFaixaPubAnt" />
+                <ScalarProperty Name="ValorFaixaPubEsgAnt" ColumnName="ValorFaixaPubEsgAnt" />
+                <ScalarProperty Name="AguaSocAnt" ColumnName="AguaSocAnt" />
+                <ScalarProperty Name="EsgotoSocAnt" ColumnName="EsgotoSocAnt" />
+                <ScalarProperty Name="ValorFaixaSocAnt" ColumnName="ValorFaixaSocAnt" />
+                <ScalarProperty Name="ValorFaixaSocEsgAnt" ColumnName="ValorFaixaSocEsgAnt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblEncargos">
+            <EntityTypeMapping TypeName="Model.tblEncargos">
+              <MappingFragment StoreEntitySet="tblEncargos">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Multa" ColumnName="Multa" />
+                <ScalarProperty Name="Juros" ColumnName="Juros" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLogra">
+            <EntityTypeMapping TypeName="Model.tblLogra">
+              <MappingFragment StoreEntitySet="tblLogra">
+                <ScalarProperty Name="TotContas" ColumnName="TotContas" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="NomeLogra" ColumnName="NomeLogra" />
+                <ScalarProperty Name="CodLogra" ColumnName="CodLogra" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMensagem">
+            <EntityTypeMapping TypeName="Model.tblMensagem">
+              <MappingFragment StoreEntitySet="tblMensagem">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Mensagem" ColumnName="Mensagem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPosicao">
+            <EntityTypeMapping TypeName="Model.tblPosicao">
+              <MappingFragment StoreEntitySet="tblPosicao">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CodRotaAtual" ColumnName="CodRotaAtual" />
+                <ScalarProperty Name="RegAtualLeit" ColumnName="RegAtualLeit" />
+                <ScalarProperty Name="RegAtual" ColumnName="RegAtual" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

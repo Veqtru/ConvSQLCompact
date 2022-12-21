@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblCadastro">
+    <Key>
+      <PropertyRef Name="CodConta" />
+    </Key>
+    <Property Name="CodConta" Type="Int32" Nullable="false" />
+    <Property Name="NumRes" Type="Int32" />
+    <Property Name="NumCom" Type="Int32" />
+    <Property Name="NumInd" Type="Int32" />
+    <Property Name="NumPub" Type="Int32" />
+    <Property Name="Hidrometro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TipoLigacao" Type="Int32" />
+    <Property Name="Piscina" Type="Int32" />
+    <Property Name="CaoBravo" Type="Int32" />
+    <Property Name="AlterouCad" Type="Int32" />
+    <Property Name="NumSoc" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblLeitura">
+    <Key>
+      <PropertyRef Name="Codleitura" />
+    </Key>
+    <Property Name="CodConta" Type="Int32" />
+    <Property Name="Mes1" Type="DateTime" Precision="3" />
+    <Property Name="Mes2" Type="DateTime" Precision="3" />
+    <Property Name="Mes3" Type="DateTime" Precision="3" />
+    <Property Name="Mes4" Type="DateTime" Precision="3" />
+    <Property Name="Mes5" Type="DateTime" Precision="3" />
+    <Property Name="Mes6" Type="DateTime" Precision="3" />
+    <Property Name="MesAnoAnt" Type="DateTime" Precision="3" />
+    <Property Name="CodOcor1" Type="Int32" />
+    <Property Name="CodOcor2" Type="Int32" />
+    <Property Name="CodOcor3" Type="Int32" />
+    <Property Name="CodOcor4" Type="Int32" />
+    <Property Name="CodOcor5" Type="Int32" />
+    <Property Name="CodOcor6" Type="Int32" />
+    <Property Name="CodOcorAnoAnt" Type="Int32" />
+    <Property Name="DiasConsumo1" Type="Int32" />
+    <Property Name="DiasConsumo2" Type="Int32" />
+    <Property Name="DiasConsumo3" Type="Int32" />
+    <Property Name="DiasConsumo4" Type="Int32" />
+    <Property Name="DiasConsumo5" Type="Int32" />
+    <Property Name="DiasConsumo6" Type="Int32" />
+    <Property Name="DiasConsAnoAnt" Type="Int32" />
+    <Property Name="Consumo1" Type="Int32" />
+    <Property Name="Consumo2" Type="Int32" />
+    <Property Name="Consumo3" Type="Int32" />
+    <Property Name="Consumo4" Type="Int32" />
+    <Property Name="Consumo5" Type="Int32" />
+    <Property Name="Consumo6" Type="Int32" />
+    <Property Name="ConsAnoAnt" Type="Int32" />
+    <Property Name="CodBanco" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="CodAgencia" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Insumo1" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo1" Type="Double" />
+    <Property Name="Insumo2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo2" Type="Double" />
+    <Property Name="Insumo3" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo3" Type="Double" />
+    <Property Name="Insumo4" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo4" Type="Double" />
+    <Property Name="Insumo5" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo5" Type="Double" />
+    <Property Name="Insumo6" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo6" Type="Double" />
+    <Property Name="Insumo7" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo7" Type="Double" />
+    <Property Name="Insumo8" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo8" Type="Double" />
+    <Property Name="Insumo9" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo9" Type="Double" />
+    <Property Name="Insumo10" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo10" Type="Double" />
+    <Property Name="Insumo11" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo11" Type="Double" />
+    <Property Name="Insumo12" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo12" Type="Double" />
+    <Property Name="Insumo13" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo13" Type="Double" />
+    <Property Name="Insumo14" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo14" Type="Double" />
+    <Property Name="Insumo15" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo15" Type="Double" />
+    <Property Name="Insumo16" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo16" Type="Double" />
+    <Property Name="Insumo17" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo17" Type="Double" />
+    <Property Name="Insumo18" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo18" Type="Double" />
+    <Property Name="Insumo19" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo19" Type="Double" />
+    <Property Name="Insumo20" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="ValorInsumo20" Type="Double" />
+    <Property Name="NumRes" Type="Int32" />
+    <Property Name="NumCom" Type="Int32" />
+    <Property Name="NumInd" Type="Int32" />
+    <Property Name="NumPub" Type="Int32" />
+    <Property Name="DataVencto" Type="DateTime" Precision="3" />
+    <Property Name="Ref" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="MesFat" Type="DateTime" Precision="3" />
+    <Property Name="Hidrometro" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NomeCliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Endereco" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="EnderecoEnt" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BairroEnt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CidadeEnt" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LeituraAnt" Type="Int32" />
+    <Property Name="LeituraAtual" Type="Int32" />
+    <Property Name="DiasConsAtual" Type="Int32" />
+    <Property Name="ConsumoAtual" Type="Int32" />
+    <Property Name="DataLeitura" Type="DateTime" Precision="3" />
+    <Property Name="CodOcorAtual" Type="Int32" />
+    <Property Name="Media" Type="Int32" />
+    <Property Name="ExisteDebAnt" Type="Int32" />
+    <Property Name="ObterMedia" Type="Int32" />
+    <Property Name="DescOcor" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="MostraNaConta" Type="Int32" />
+    <Property Name="CodigoBar1" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoBar2" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoBar3" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="CodigoBar4" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="DigitoVer1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="DigitoVer2" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="DigitoVer3" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="DigitoVer4" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="ValorTotal" Type="Double" />
+    <Property Name="CodLogra" Type="Int32" />
+    <Property Name="CodLograEnt" Type="Int32" />
+    <Property Name="ContasEmAberto" Type="Int32" />
+    <Property Name="Vazamento" Type="Int32" />
+    <Property Name="Faturado" Type="Int32" />
+    <Property Name="HidroMovto" Type="Int32" />
+    <Property Name="Conferida" Type="Int32" />
+    <Property Name="NumPag" Type="Int32" />
+    <Property Name="PagAtual" Type="Int32" />
+    <Property Name="Codleitura" Type="Int32" Nullable="false" />
+    <Property Name="CodNotificacao" Type="Int32" />
+    <Property Name="MensagemConta" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Face" Type="Int32" />
+    <Property Name="Piscina" Type="Int32" />
+    <Property Name="CaoBravo" Type="Int32" />
+    <Property Name="TipoLigacao" Type="Int32" />
+    <Property Name="CodRegiaoRota" Type="Int32" />
+    <Property Name="SeqLeiturista" Type="Int32" />
+    <Property Name="SeqEndereco" Type="Int32" />
+    <Property Name="FezLeitura" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="QtdeEdit" Type="Int32" />
+    <Property Name="HistLeitura" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="Numero" Type="Int32" />
+    <Property Name="Complemento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="DataImpressao" Type="DateTime" Precision="3" />
+    <Property Name="DataEntrega" Type="DateTime" Precision="3" />
+    <Property Name="MediaMenor" Type="Int32" />
+    <Property Name="MediaMaior" Type="Int32" />
+    <Property Name="TemDivida" Type="Int32" />
+    <Property Name="QtdeRes" Type="Int32" />
+    <Property Name="MultiRes" Type="Int32" />
+    <Property Name="ConsumoMinimo" Type="Int32" />
+    <Property Name="CodTpCliente" Type="Int32" />
+    <Property Name="CodUsuario" Type="Int32" />
+    <Property Name="DataLeituraAnt" Type="DateTime" Precision="3" />
+    <Property Name="Pendente" Type="Int32" />
+    <Property Name="TaxaOutros" Type="Double" />
+    <Property Name="AlertaCodOcor" Type="Int32" />
+    <Property Name="Divida" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AlterouCad" Type="Int32" />
+    <Property Name="HidroVirou" Type="Int32" />
+    <Property Name="Obs" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="NumSoc" Type="Int32" />
+    <Property Name="ConsResidual" Type="Int32" />
+    <Property Name="DiasResidual" Type="Int32" />
+    <Property Name="CodTabela" Type="Int32" />
+    <Property Name="Mes7" Type="DateTime" Precision="3" />
+    <Property Name="Mes8" Type="DateTime" Precision="3" />
+    <Property Name="Mes9" Type="DateTime" Precision="3" />
+    <Property Name="Mes10" Type="DateTime" Precision="3" />
+    <Property Name="Mes11" Type="DateTime" Precision="3" />
+    <Property Name="Mes12" Type="DateTime" Precision="3" />
+    <Property Name="CodOcor7" Type="Int32" />
+    <Property Name="CodOcor8" Type="Int32" />
+    <Property Name="CodOcor9" Type="Int32" />
+    <Property Name="CodOcor10" Type="Int32" />
+    <Property Name="CodOcor11" Type="Int32" />
+    <Property Name="CodOcor12" Type="Int32" />
+    <Property Name="DiasConsumo7" Type="Int32" />
+    <Property Name="DiasConsumo8" Type="Int32" />
+    <Property Name="DiasConsumo9" Type="Int32" />
+    <Property Name="DiasConsumo10" Type="Int32" />
+    <Property Name="DiasConsumo11" Type="Int32" />
+    <Property Name="DiasConsumo12" Type="Int32" />
+    <Property Name="Consumo7" Type="Int32" />
+    <Property Name="Consumo8" Type="Int32" />
+    <Property Name="Consumo9" Type="Int32" />
+    <Property Name="Consumo10" Type="Int32" />
+    <Property Name="Consumo11" Type="Int32" />
+    <Property Name="Consumo12" Type="Int32" />
+    <Property Name="CEP" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="QuitacaoAnual" Type="Int32" />
+    <Property Name="Vazao" Type="Double" Nullable="true" />
+    <Property Name="DataInstalacao" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="Situacao" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="Notificacoes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RespFinanc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblLog">
+    <Key>
+      <PropertyRef Name="CodReg" />
+    </Key>
+    <Property Name="DataSistema" Type="DateTime" Precision="3" />
+    <Property Name="CodReg" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Versao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblOcor">
+    <Key>
+      <PropertyRef Name="CodOcor" />
+    </Key>
+    <Property Name="CodOcor" Type="Int32" Nullable="false" />
+    <Property Name="DescOcor" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="ObterMedia" Type="Int16" />
+    <Property Name="MostraNaConta" Type="Int16" />
+    <Property Name="EvitaFreq" Type="Int16" />
+    <Property Name="ExigeLeitura" Type="Int16" />
+  </EntityType>
+  <EntityType Name="tblRota">
+    <Key>
+      <PropertyRef Name="CodRegiaoRota" />
+    </Key>
+    <Property Name="CodRegiaoRota" Type="Int32" Nullable="false" />
+    <Property Name="DescRota" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TotContas" Type="Int32" />
+    <Property Name="CodUsuario" Type="Int32" />
+    <Property Name="NomeUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MesFat" Type="DateTime" Precision="3" />
+    <Property Name="DataLiberacao" Type="DateTime" Precision="3" />
+    <Property Name="MacAddress" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="ProximaLeitura" Type="DateTime" Precision="3" />
+    <Property Name="PosIniImpressao" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblSistemaAbast">
+    <Key>
+      <PropertyRef Name="CodRegiaoRota" />
+    </Key>
+    <Property Name="CodRegiaoRota" Type="Int32" Nullable="false" />
+    <Property Name="Mesfat" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CodSistemaAbast" Type="Int32" Nullable="false" />
+    <Property Name="DataInicial" Type="DateTime" Precision="3" />
+    <Property Name="DataFinal" Type="DateTime" Precision="3" />
+    <Property Name="TurbidezUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TurbidezValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TurbidezValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TurbidezAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TurbidezAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CorUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CorValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CorValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CorAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CorAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PHUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PHValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PHAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PHValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PHAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CloroUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CloroValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CloroValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CloroAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CloroAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ColiformesUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ColiformesValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ColiformesValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ColiformesAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ColiformesAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FluorUnidade" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FluorValorMaxPermitido" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FluorAnalisadas" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FluorValorMedioDetectado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FluorAmostrasPadrao" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblTarifaTabelas">
+    <Key>
+      <PropertyRef Name="CodTabela" />
+    </Key>
+    <Property Name="CodTabela" Type="Int32" Nullable="false" />
+    <Property Name="DescTabela" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DataVigor" Type="DateTime" Precision="3" />
+    <Property Name="CodTabelaOrigem" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblTarifaTabelasCategoria">
+    <Key>
+      <PropertyRef Name="CodTabela" />
+      <PropertyRef Name="Faixa" />
+    </Key>
+    <Property Name="CodTabela" Type="Int32" Nullable="false" />
+    <Property Name="Faixa" Type="Int32" Nullable="false" />
+    <Property Name="AguaRes" Type="Double" />
+    <Property Name="EsgotoRes" Type="Double" />
+    <Property Name="ValorFaixaRes" Type="Double" />
+    <Property Name="ValorFaixaResEsg" Type="Double" />
+    <Property Name="AguaCom" Type="Double" />
+    <Property Name="EsgotoCom" Type="Double" />
+    <Property Name="ValorFaixaCom" Type="Double" />
+    <Property Name="ValorFaixaComEsg" Type="Double" />
+    <Property Name="AguaInd" Type="Double" />
+    <Property Name="EsgotoInd" Type="Double" />
+    <Property Name="ValorFaixaInd" Type="Double" />
+    <Property Name="ValorFaixaIndEsg" Type="Double" />
+    <Property Name="AguaPub" Type="Double" />
+    <Property Name="EsgotoPub" Type="Double" />
+    <Property Name="ValorFaixaPub" Type="Double" />
+    <Property Name="ValorFaixaPubEsg" Type="Double" />
+    <Property Name="AguaSoc" Type="Double" />
+    <Property Name="EsgotoSoc" Type="Double" />
+    <Property Name="ValorFaixaSoc" Type="Double" />
+    <Property Name="ValorFaixaSocEsg" Type="Double" />
+    <Property Name="AguaResAnt" Type="Double" />
+    <Property Name="EsgotoResAnt" Type="Double" />
+    <Property Name="ValorFaixaResAnt" Type="Double" />
+    <Property Name="ValorFaixaResEsgAnt" Type="Double" />
+    <Property Name="AguaComAnt" Type="Double" />
+    <Property Name="EsgotoComAnt" Type="Double" />
+    <Property Name="ValorFaixaComAnt" Type="Double" />
+    <Property Name="ValorFaixaComEsgAnt" Type="Double" />
+    <Property Name="AguaIndAnt" Type="Double" />
+    <Property Name="EsgotoIndAnt" Type="Double" />
+    <Property Name="ValorFaixaIndAnt" Type="Double" />
+    <Property Name="ValorFaixaIndEsgAnt" Type="Double" />
+    <Property Name="AguaPubAnt" Type="Double" />
+    <Property Name="EsgotoPubAnt" Type="Double" />
+    <Property Name="ValorFaixaPubAnt" Type="Double" />
+    <Property Name="ValorFaixaPubEsgAnt" Type="Double" />
+    <Property Name="AguaSocAnt" Type="Double" />
+    <Property Name="EsgotoSocAnt" Type="Double" />
+    <Property Name="ValorFaixaSocAnt" Type="Double" />
+    <Property Name="ValorFaixaSocEsgAnt" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="HidroMobileEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblCadastro" EntityType="Self.tblCadastro" />
+    <EntitySet Name="tblLeitura" EntityType="Self.tblLeitura" />
+    <EntitySet Name="tblLog" EntityType="Self.tblLog" />
+    <EntitySet Name="tblOcor" EntityType="Self.tblOcor" />
+    <EntitySet Name="tblRota" EntityType="Self.tblRota" />
+    <EntitySet Name="tblSistemaAbast" EntityType="Self.tblSistemaAbast" />
+    <EntitySet Name="tblTarifaTabelas" EntityType="Self.tblTarifaTabelas" />
+    <EntitySet Name="tblTarifaTabelasCategoria" EntityType="Self.tblTarifaTabelasCategoria" />
+    <EntitySet Name="tblEncargos" EntityType="Model.tblEncargos" />
+    <EntitySet Name="tblLogra" EntityType="Model.tblLogra" />
+    <EntitySet Name="tblMensagem" EntityType="Model.tblMensagem" />
+    <EntitySet Name="tblPosicao" EntityType="Model.tblPosicao" />
+  </EntityContainer>
+  <EntityType Name="tblEncargos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Juros" Type="Double" />
+    <Property Name="Multa" Type="Double" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblLogra">
+    <Key>
+      <PropertyRef Name="CodLogra" />
+    </Key>
+    <Property Name="CodLogra" Type="Int32" Nullable="false" />
+    <Property Name="NomeLogra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Bairro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TotContas" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblMensagem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Mensagem" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="tblPosicao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="RegAtual" Type="Int32" />
+    <Property Name="RegAtualLeit" Type="Int32" />
+    <Property Name="CodRotaAtual" Type="Int32" />
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

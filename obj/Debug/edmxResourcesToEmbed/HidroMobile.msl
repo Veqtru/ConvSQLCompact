@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="HidroMobileEntities">
+    <EntitySetMapping Name="tblCadastro">
+      <EntityTypeMapping TypeName="Model.tblCadastro">
+        <MappingFragment StoreEntitySet="tblCadastro">
+          <ScalarProperty Name="CodConta" ColumnName="CodConta" />
+          <ScalarProperty Name="NumRes" ColumnName="NumRes" />
+          <ScalarProperty Name="NumCom" ColumnName="NumCom" />
+          <ScalarProperty Name="NumInd" ColumnName="NumInd" />
+          <ScalarProperty Name="NumPub" ColumnName="NumPub" />
+          <ScalarProperty Name="Hidrometro" ColumnName="Hidrometro" />
+          <ScalarProperty Name="TipoLigacao" ColumnName="TipoLigacao" />
+          <ScalarProperty Name="Piscina" ColumnName="Piscina" />
+          <ScalarProperty Name="CaoBravo" ColumnName="CaoBravo" />
+          <ScalarProperty Name="AlterouCad" ColumnName="AlterouCad" />
+          <ScalarProperty Name="NumSoc" ColumnName="NumSoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLeitura">
+      <EntityTypeMapping TypeName="Model.tblLeitura">
+        <MappingFragment StoreEntitySet="tblLeitura">
+          <ScalarProperty Name="RespFinanc" ColumnName="RespFinanc" />
+          <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+          <ScalarProperty Name="CodConta" ColumnName="CodConta" />
+          <ScalarProperty Name="Mes1" ColumnName="Mes1" />
+          <ScalarProperty Name="Mes2" ColumnName="Mes2" />
+          <ScalarProperty Name="Mes3" ColumnName="Mes3" />
+          <ScalarProperty Name="Mes4" ColumnName="Mes4" />
+          <ScalarProperty Name="Mes5" ColumnName="Mes5" />
+          <ScalarProperty Name="Mes6" ColumnName="Mes6" />
+          <ScalarProperty Name="MesAnoAnt" ColumnName="MesAnoAnt" />
+          <ScalarProperty Name="CodOcor1" ColumnName="CodOcor1" />
+          <ScalarProperty Name="CodOcor2" ColumnName="CodOcor2" />
+          <ScalarProperty Name="CodOcor3" ColumnName="CodOcor3" />
+          <ScalarProperty Name="CodOcor4" ColumnName="CodOcor4" />
+          <ScalarProperty Name="CodOcor5" ColumnName="CodOcor5" />
+          <ScalarProperty Name="CodOcor6" ColumnName="CodOcor6" />
+          <ScalarProperty Name="CodOcorAnoAnt" ColumnName="CodOcorAnoAnt" />
+          <ScalarProperty Name="DiasConsumo1" ColumnName="DiasConsumo1" />
+          <ScalarProperty Name="DiasConsumo2" ColumnName="DiasConsumo2" />
+          <ScalarProperty Name="DiasConsumo3" ColumnName="DiasConsumo3" />
+          <ScalarProperty Name="DiasConsumo4" ColumnName="DiasConsumo4" />
+          <ScalarProperty Name="DiasConsumo5" ColumnName="DiasConsumo5" />
+          <ScalarProperty Name="DiasConsumo6" ColumnName="DiasConsumo6" />
+          <ScalarProperty Name="DiasConsAnoAnt" ColumnName="DiasConsAnoAnt" />
+          <ScalarProperty Name="Consumo1" ColumnName="Consumo1" />
+          <ScalarProperty Name="Consumo2" ColumnName="Consumo2" />
+          <ScalarProperty Name="Consumo3" ColumnName="Consumo3" />
+          <ScalarProperty Name="Consumo4" ColumnName="Consumo4" />
+          <ScalarProperty Name="Consumo5" ColumnName="Consumo5" />
+          <ScalarProperty Name="Consumo6" ColumnName="Consumo6" />
+          <ScalarProperty Name="ConsAnoAnt" ColumnName="ConsAnoAnt" />
+          <ScalarProperty Name="CodBanco" ColumnName="CodBanco" />
+          <ScalarProperty Name="CodAgencia" ColumnName="CodAgencia" />
+          <ScalarProperty Name="Insumo1" ColumnName="Insumo1" />
+          <ScalarProperty Name="ValorInsumo1" ColumnName="ValorInsumo1" />
+          <ScalarProperty Name="Insumo2" ColumnName="Insumo2" />
+          <ScalarProperty Name="ValorInsumo2" ColumnName="ValorInsumo2" />
+          <ScalarProperty Name="Insumo3" ColumnName="Insumo3" />
+          <ScalarProperty Name="ValorInsumo3" ColumnName="ValorInsumo3" />
+          <ScalarProperty Name="Insumo4" ColumnName="Insumo4" />
+          <ScalarProperty Name="ValorInsumo4" ColumnName="ValorInsumo4" />
+          <ScalarProperty Name="Insumo5" ColumnName="Insumo5" />
+          <ScalarProperty Name="ValorInsumo5" ColumnName="ValorInsumo5" />
+          <ScalarProperty Name="Insumo6" ColumnName="Insumo6" />
+          <ScalarProperty Name="ValorInsumo6" ColumnName="ValorInsumo6" />
+          <ScalarProperty Name="Insumo7" ColumnName="Insumo7" />
+          <ScalarProperty Name="ValorInsumo7" ColumnName="ValorInsumo7" />
+          <ScalarProperty Name="Insumo8" ColumnName="Insumo8" />
+          <ScalarProperty Name="ValorInsumo8" ColumnName="ValorInsumo8" />
+          <ScalarProperty Name="Insumo9" ColumnName="Insumo9" />
+          <ScalarProperty Name="ValorInsumo9" ColumnName="ValorInsumo9" />
+          <ScalarProperty Name="Insumo10" ColumnName="Insumo10" />
+          <ScalarProperty Name="ValorInsumo10" ColumnName="ValorInsumo10" />
+          <ScalarProperty Name="Insumo11" ColumnName="Insumo11" />
+          <ScalarProperty Name="ValorInsumo11" ColumnName="ValorInsumo11" />
+          <ScalarProperty Name="Insumo12" ColumnName="Insumo12" />
+          <ScalarProperty Name="ValorInsumo12" ColumnName="ValorInsumo12" />
+          <ScalarProperty Name="Insumo13" ColumnName="Insumo13" />
+          <ScalarProperty Name="ValorInsumo13" ColumnName="ValorInsumo13" />
+          <ScalarProperty Name="Insumo14" ColumnName="Insumo14" />
+          <ScalarProperty Name="ValorInsumo14" ColumnName="ValorInsumo14" />
+          <ScalarProperty Name="Insumo15" ColumnName="Insumo15" />
+          <ScalarProperty Name="ValorInsumo15" ColumnName="ValorInsumo15" />
+          <ScalarProperty Name="Insumo16" ColumnName="Insumo16" />
+          <ScalarProperty Name="ValorInsumo16" ColumnName="ValorInsumo16" />
+          <ScalarProperty Name="Insumo17" ColumnName="Insumo17" />
+          <ScalarProperty Name="ValorInsumo17" ColumnName="ValorInsumo17" />
+          <ScalarProperty Name="Insumo18" ColumnName="Insumo18" />
+          <ScalarProperty Name="ValorInsumo18" ColumnName="ValorInsumo18" />
+          <ScalarProperty Name="Insumo19" ColumnName="Insumo19" />
+          <ScalarProperty Name="ValorInsumo19" ColumnName="ValorInsumo19" />
+          <ScalarProperty Name="Insumo20" ColumnName="Insumo20" />
+          <ScalarProperty Name="ValorInsumo20" ColumnName="ValorInsumo20" />
+          <ScalarProperty Name="NumRes" ColumnName="NumRes" />
+          <ScalarProperty Name="NumCom" ColumnName="NumCom" />
+          <ScalarProperty Name="NumInd" ColumnName="NumInd" />
+          <ScalarProperty Name="NumPub" ColumnName="NumPub" />
+          <ScalarProperty Name="DataVencto" ColumnName="DataVencto" />
+          <ScalarProperty Name="Ref" ColumnName="Ref" />
+          <ScalarProperty Name="MesFat" ColumnName="MesFat" />
+          <ScalarProperty Name="Hidrometro" ColumnName="Hidrometro" />
+          <ScalarProperty Name="NomeCliente" ColumnName="NomeCliente" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="EnderecoEnt" ColumnName="EnderecoEnt" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="BairroEnt" ColumnName="BairroEnt" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="CidadeEnt" ColumnName="CidadeEnt" />
+          <ScalarProperty Name="LeituraAnt" ColumnName="LeituraAnt" />
+          <ScalarProperty Name="LeituraAtual" ColumnName="LeituraAtual" />
+          <ScalarProperty Name="DiasConsAtual" ColumnName="DiasConsAtual" />
+          <ScalarProperty Name="ConsumoAtual" ColumnName="ConsumoAtual" />
+          <ScalarProperty Name="DataLeitura" ColumnName="DataLeitura" />
+          <ScalarProperty Name="CodOcorAtual" ColumnName="CodOcorAtual" />
+          <ScalarProperty Name="Media" ColumnName="Media" />
+          <ScalarProperty Name="ExisteDebAnt" ColumnName="ExisteDebAnt" />
+          <ScalarProperty Name="ObterMedia" ColumnName="ObterMedia" />
+          <ScalarProperty Name="DescOcor" ColumnName="DescOcor" />
+          <ScalarProperty Name="MostraNaConta" ColumnName="MostraNaConta" />
+          <ScalarProperty Name="CodigoBar1" ColumnName="CodigoBar1" />
+          <ScalarProperty Name="CodigoBar2" ColumnName="CodigoBar2" />
+          <ScalarProperty Name="CodigoBar3" ColumnName="CodigoBar3" />
+          <ScalarProperty Name="CodigoBar4" ColumnName="CodigoBar4" />
+          <ScalarProperty Name="DigitoVer1" ColumnName="DigitoVer1" />
+          <ScalarProperty Name="DigitoVer2" ColumnName="DigitoVer2" />
+          <ScalarProperty Name="DigitoVer3" ColumnName="DigitoVer3" />
+          <ScalarProperty Name="DigitoVer4" ColumnName="DigitoVer4" />
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+          <ScalarProperty Name="CodLogra" ColumnName="CodLogra" />
+          <ScalarProperty Name="CodLograEnt" ColumnName="CodLograEnt" />
+          <ScalarProperty Name="ContasEmAberto" ColumnName="ContasEmAberto" />
+          <ScalarProperty Name="Vazamento" ColumnName="Vazamento" />
+          <ScalarProperty Name="Faturado" ColumnName="Faturado" />
+          <ScalarProperty Name="HidroMovto" ColumnName="HidroMovto" />
+          <ScalarProperty Name="Conferida" ColumnName="Conferida" />
+          <ScalarProperty Name="NumPag" ColumnName="NumPag" />
+          <ScalarProperty Name="PagAtual" ColumnName="PagAtual" />
+          <ScalarProperty Name="Codleitura" ColumnName="Codleitura" />
+          <ScalarProperty Name="CodNotificacao" ColumnName="CodNotificacao" />
+          <ScalarProperty Name="MensagemConta" ColumnName="MensagemConta" />
+          <ScalarProperty Name="Face" ColumnName="Face" />
+          <ScalarProperty Name="Piscina" ColumnName="Piscina" />
+          <ScalarProperty Name="CaoBravo" ColumnName="CaoBravo" />
+          <ScalarProperty Name="TipoLigacao" ColumnName="TipoLigacao" />
+          <ScalarProperty Name="CodRegiaoRota" ColumnName="CodRegiaoRota" />
+          <ScalarProperty Name="SeqLeiturista" ColumnName="SeqLeiturista" />
+          <ScalarProperty Name="SeqEndereco" ColumnName="SeqEndereco" />
+          <ScalarProperty Name="FezLeitura" ColumnName="FezLeitura" />
+          <ScalarProperty Name="QtdeEdit" ColumnName="QtdeEdit" />
+          <ScalarProperty Name="HistLeitura" ColumnName="HistLeitura" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="DataImpressao" ColumnName="DataImpressao" />
+          <ScalarProperty Name="DataEntrega" ColumnName="DataEntrega" />
+          <ScalarProperty Name="MediaMenor" ColumnName="MediaMenor" />
+          <ScalarProperty Name="MediaMaior" ColumnName="MediaMaior" />
+          <ScalarProperty Name="TemDivida" ColumnName="TemDivida" />
+          <ScalarProperty Name="QtdeRes" ColumnName="QtdeRes" />
+          <ScalarProperty Name="MultiRes" ColumnName="MultiRes" />
+          <ScalarProperty Name="ConsumoMinimo" ColumnName="ConsumoMinimo" />
+          <ScalarProperty Name="CodTpCliente" ColumnName="CodTpCliente" />
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="DataLeituraAnt" ColumnName="DataLeituraAnt" />
+          <ScalarProperty Name="Pendente" ColumnName="Pendente" />
+          <ScalarProperty Name="TaxaOutros" ColumnName="TaxaOutros" />
+          <ScalarProperty Name="AlertaCodOcor" ColumnName="AlertaCodOcor" />
+          <ScalarProperty Name="Divida" ColumnName="Divida" />
+          <ScalarProperty Name="AlterouCad" ColumnName="AlterouCad" />
+          <ScalarProperty Name="HidroVirou" ColumnName="HidroVirou" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="NumSoc" ColumnName="NumSoc" />
+          <ScalarProperty Name="ConsResidual" ColumnName="ConsResidual" />
+          <ScalarProperty Name="DiasResidual" ColumnName="DiasResidual" />
+          <ScalarProperty Name="CodTabela" ColumnName="CodTabela" />
+          <ScalarProperty Name="Mes7" ColumnName="Mes7" />
+          <ScalarProperty Name="Mes8" ColumnName="Mes8" />
+          <ScalarProperty Name="Mes9" ColumnName="Mes9" />
+          <ScalarProperty Name="Mes10" ColumnName="Mes10" />
+          <ScalarProperty Name="Mes11" ColumnName="Mes11" />
+          <ScalarProperty Name="Mes12" ColumnName="Mes12" />
+          <ScalarProperty Name="CodOcor7" ColumnName="CodOcor7" />
+          <ScalarProperty Name="CodOcor8" ColumnName="CodOcor8" />
+          <ScalarProperty Name="CodOcor9" ColumnName="CodOcor9" />
+          <ScalarProperty Name="CodOcor10" ColumnName="CodOcor10" />
+          <ScalarProperty Name="CodOcor11" ColumnName="CodOcor11" />
+          <ScalarProperty Name="CodOcor12" ColumnName="CodOcor12" />
+          <ScalarProperty Name="DiasConsumo7" ColumnName="DiasConsumo7" />
+          <ScalarProperty Name="DiasConsumo8" ColumnName="DiasConsumo8" />
+          <ScalarProperty Name="DiasConsumo9" ColumnName="DiasConsumo9" />
+          <ScalarProperty Name="DiasConsumo10" ColumnName="DiasConsumo10" />
+          <ScalarProperty Name="DiasConsumo11" ColumnName="DiasConsumo11" />
+          <ScalarProperty Name="DiasConsumo12" ColumnName="DiasConsumo12" />
+          <ScalarProperty Name="Consumo7" ColumnName="Consumo7" />
+          <ScalarProperty Name="Consumo8" ColumnName="Consumo8" />
+          <ScalarProperty Name="Consumo9" ColumnName="Consumo9" />
+          <ScalarProperty Name="Consumo10" ColumnName="Consumo10" />
+          <ScalarProperty Name="Consumo11" ColumnName="Consumo11" />
+          <ScalarProperty Name="Consumo12" ColumnName="Consumo12" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="QuitacaoAnual" ColumnName="QuitacaoAnual" />
+          <ScalarProperty Name="Vazao" ColumnName="Vazao" />
+          <ScalarProperty Name="DataInstalacao" ColumnName="DataInstalacao" />
+          <ScalarProperty Name="Notificacoes" ColumnName="Notificacoes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLog">
+      <EntityTypeMapping TypeName="Model.tblLog">
+        <MappingFragment StoreEntitySet="tblLog">
+          <ScalarProperty Name="DataSistema" ColumnName="DataSistema" />
+          <ScalarProperty Name="CodReg" ColumnName="CodReg" />
+          <ScalarProperty Name="Versao" ColumnName="Versao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOcor">
+      <EntityTypeMapping TypeName="Model.tblOcor">
+        <MappingFragment StoreEntitySet="tblOcor">
+          <ScalarProperty Name="CodOcor" ColumnName="CodOcor" />
+          <ScalarProperty Name="DescOcor" ColumnName="DescOcor" />
+          <ScalarProperty Name="ObterMedia" ColumnName="ObterMedia" />
+          <ScalarProperty Name="MostraNaConta" ColumnName="MostraNaConta" />
+          <ScalarProperty Name="EvitaFreq" ColumnName="EvitaFreq" />
+          <ScalarProperty Name="ExigeLeitura" ColumnName="ExigeLeitura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRota">
+      <EntityTypeMapping TypeName="Model.tblRota">
+        <MappingFragment StoreEntitySet="tblRota">
+          <ScalarProperty Name="CodRegiaoRota" ColumnName="CodRegiaoRota" />
+          <ScalarProperty Name="DescRota" ColumnName="DescRota" />
+          <ScalarProperty Name="TotContas" ColumnName="TotContas" />
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="NomeUsuario" ColumnName="NomeUsuario" />
+          <ScalarProperty Name="MesFat" ColumnName="MesFat" />
+          <ScalarProperty Name="DataLiberacao" ColumnName="DataLiberacao" />
+          <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
+          <ScalarProperty Name="ProximaLeitura" ColumnName="ProximaLeitura" />
+          <ScalarProperty Name="PosIniImpressao" ColumnName="PosIniImpressao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSistemaAbast">
+      <EntityTypeMapping TypeName="Model.tblSistemaAbast">
+        <MappingFragment StoreEntitySet="tblSistemaAbast">
+          <ScalarProperty Name="FluorAmostrasPadrao" ColumnName="FluorAmostrasPadrao" />
+          <ScalarProperty Name="FluorValorMedioDetectado" ColumnName="FluorValorMedioDetectado" />
+          <ScalarProperty Name="FluorAnalisadas" ColumnName="FluorAnalisadas" />
+          <ScalarProperty Name="FluorValorMaxPermitido" ColumnName="FluorValorMaxPermitido" />
+          <ScalarProperty Name="FluorUnidade" ColumnName="FluorUnidade" />
+          <ScalarProperty Name="ColiformesAmostrasPadrao" ColumnName="ColiformesAmostrasPadrao" />
+          <ScalarProperty Name="ColiformesValorMedioDetectado" ColumnName="ColiformesValorMedioDetectado" />
+          <ScalarProperty Name="ColiformesAnalisadas" ColumnName="ColiformesAnalisadas" />
+          <ScalarProperty Name="ColiformesValorMaxPermitido" ColumnName="ColiformesValorMaxPermitido" />
+          <ScalarProperty Name="ColiformesUnidade" ColumnName="ColiformesUnidade" />
+          <ScalarProperty Name="CloroAmostrasPadrao" ColumnName="CloroAmostrasPadrao" />
+          <ScalarProperty Name="CloroValorMedioDetectado" ColumnName="CloroValorMedioDetectado" />
+          <ScalarProperty Name="CloroAnalisadas" ColumnName="CloroAnalisadas" />
+          <ScalarProperty Name="CloroValorMaxPermitido" ColumnName="CloroValorMaxPermitido" />
+          <ScalarProperty Name="CloroUnidade" ColumnName="CloroUnidade" />
+          <ScalarProperty Name="PHAmostrasPadrao" ColumnName="PHAmostrasPadrao" />
+          <ScalarProperty Name="PHValorMedioDetectado" ColumnName="PHValorMedioDetectado" />
+          <ScalarProperty Name="PHAnalisadas" ColumnName="PHAnalisadas" />
+          <ScalarProperty Name="PHValorMaxPermitido" ColumnName="PHValorMaxPermitido" />
+          <ScalarProperty Name="PHUnidade" ColumnName="PHUnidade" />
+          <ScalarProperty Name="CorAmostrasPadrao" ColumnName="CorAmostrasPadrao" />
+          <ScalarProperty Name="CorValorMedioDetectado" ColumnName="CorValorMedioDetectado" />
+          <ScalarProperty Name="CorAnalisadas" ColumnName="CorAnalisadas" />
+          <ScalarProperty Name="CorValorMaxPermitido" ColumnName="CorValorMaxPermitido" />
+          <ScalarProperty Name="CorUnidade" ColumnName="CorUnidade" />
+          <ScalarProperty Name="TurbidezAmostrasPadrao" ColumnName="TurbidezAmostrasPadrao" />
+          <ScalarProperty Name="TurbidezValorMedioDetectado" ColumnName="TurbidezValorMedioDetectado" />
+          <ScalarProperty Name="TurbidezAnalisadas" ColumnName="TurbidezAnalisadas" />
+          <ScalarProperty Name="TurbidezValorMaxPermitido" ColumnName="TurbidezValorMaxPermitido" />
+          <ScalarProperty Name="TurbidezUnidade" ColumnName="TurbidezUnidade" />
+          <ScalarProperty Name="DataFinal" ColumnName="DataFinal" />
+          <ScalarProperty Name="DataInicial" ColumnName="DataInicial" />
+          <ScalarProperty Name="CodSistemaAbast" ColumnName="CodSistemaAbast" />
+          <ScalarProperty Name="Mesfat" ColumnName="Mesfat" />
+          <ScalarProperty Name="CodRegiaoRota" ColumnName="CodRegiaoRota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTarifaTabelas">
+      <EntityTypeMapping TypeName="Model.tblTarifaTabelas">
+        <MappingFragment StoreEntitySet="tblTarifaTabelas">
+          <ScalarProperty Name="CodTabela" ColumnName="CodTabela" />
+          <ScalarProperty Name="DescTabela" ColumnName="DescTabela" />
+          <ScalarProperty Name="DataVigor" ColumnName="DataVigor" />
+          <ScalarProperty Name="CodTabelaOrigem" ColumnName="CodTabelaOrigem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTarifaTabelasCategoria">
+      <EntityTypeMapping TypeName="Model.tblTarifaTabelasCategoria">
+        <MappingFragment StoreEntitySet="tblTarifaTabelasCategoria">
+          <ScalarProperty Name="CodTabela" ColumnName="CodTabela" />
+          <ScalarProperty Name="Faixa" ColumnName="Faixa" />
+          <ScalarProperty Name="AguaRes" ColumnName="AguaRes" />
+          <ScalarProperty Name="EsgotoRes" ColumnName="EsgotoRes" />
+          <ScalarProperty Name="ValorFaixaRes" ColumnName="ValorFaixaRes" />
+          <ScalarProperty Name="ValorFaixaResEsg" ColumnName="ValorFaixaResEsg" />
+          <ScalarProperty Name="AguaCom" ColumnName="AguaCom" />
+          <ScalarProperty Name="EsgotoCom" ColumnName="EsgotoCom" />
+          <ScalarProperty Name="ValorFaixaCom" ColumnName="ValorFaixaCom" />
+          <ScalarProperty Name="ValorFaixaComEsg" ColumnName="ValorFaixaComEsg" />
+          <ScalarProperty Name="AguaInd" ColumnName="AguaInd" />
+          <ScalarProperty Name="EsgotoInd" ColumnName="EsgotoInd" />
+          <ScalarProperty Name="ValorFaixaInd" ColumnName="ValorFaixaInd" />
+          <ScalarProperty Name="ValorFaixaIndEsg" ColumnName="ValorFaixaIndEsg" />
+          <ScalarProperty Name="AguaPub" ColumnName="AguaPub" />
+          <ScalarProperty Name="EsgotoPub" ColumnName="EsgotoPub" />
+          <ScalarProperty Name="ValorFaixaPub" ColumnName="ValorFaixaPub" />
+          <ScalarProperty Name="ValorFaixaPubEsg" ColumnName="ValorFaixaPubEsg" />
+          <ScalarProperty Name="AguaSoc" ColumnName="AguaSoc" />
+          <ScalarProperty Name="EsgotoSoc" ColumnName="EsgotoSoc" />
+          <ScalarProperty Name="ValorFaixaSoc" ColumnName="ValorFaixaSoc" />
+          <ScalarProperty Name="ValorFaixaSocEsg" ColumnName="ValorFaixaSocEsg" />
+          <ScalarProperty Name="AguaResAnt" ColumnName="AguaResAnt" />
+          <ScalarProperty Name="EsgotoResAnt" ColumnName="EsgotoResAnt" />
+          <ScalarProperty Name="ValorFaixaResAnt" ColumnName="ValorFaixaResAnt" />
+          <ScalarProperty Name="ValorFaixaResEsgAnt" ColumnName="ValorFaixaResEsgAnt" />
+          <ScalarProperty Name="AguaComAnt" ColumnName="AguaComAnt" />
+          <ScalarProperty Name="EsgotoComAnt" ColumnName="EsgotoComAnt" />
+          <ScalarProperty Name="ValorFaixaComAnt" ColumnName="ValorFaixaComAnt" />
+          <ScalarProperty Name="ValorFaixaComEsgAnt" ColumnName="ValorFaixaComEsgAnt" />
+          <ScalarProperty Name="AguaIndAnt" ColumnName="AguaIndAnt" />
+          <ScalarProperty Name="EsgotoIndAnt" ColumnName="EsgotoIndAnt" />
+          <ScalarProperty Name="ValorFaixaIndAnt" ColumnName="ValorFaixaIndAnt" />
+          <ScalarProperty Name="ValorFaixaIndEsgAnt" ColumnName="ValorFaixaIndEsgAnt" />
+          <ScalarProperty Name="AguaPubAnt" ColumnName="AguaPubAnt" />
+          <ScalarProperty Name="EsgotoPubAnt" ColumnName="EsgotoPubAnt" />
+          <ScalarProperty Name="ValorFaixaPubAnt" ColumnName="ValorFaixaPubAnt" />
+          <ScalarProperty Name="ValorFaixaPubEsgAnt" ColumnName="ValorFaixaPubEsgAnt" />
+          <ScalarProperty Name="AguaSocAnt" ColumnName="AguaSocAnt" />
+          <ScalarProperty Name="EsgotoSocAnt" ColumnName="EsgotoSocAnt" />
+          <ScalarProperty Name="ValorFaixaSocAnt" ColumnName="ValorFaixaSocAnt" />
+          <ScalarProperty Name="ValorFaixaSocEsgAnt" ColumnName="ValorFaixaSocEsgAnt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEncargos">
+      <EntityTypeMapping TypeName="Model.tblEncargos">
+        <MappingFragment StoreEntitySet="tblEncargos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Multa" ColumnName="Multa" />
+          <ScalarProperty Name="Juros" ColumnName="Juros" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLogra">
+      <EntityTypeMapping TypeName="Model.tblLogra">
+        <MappingFragment StoreEntitySet="tblLogra">
+          <ScalarProperty Name="TotContas" ColumnName="TotContas" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="NomeLogra" ColumnName="NomeLogra" />
+          <ScalarProperty Name="CodLogra" ColumnName="CodLogra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMensagem">
+      <EntityTypeMapping TypeName="Model.tblMensagem">
+        <MappingFragment StoreEntitySet="tblMensagem">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Mensagem" ColumnName="Mensagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPosicao">
+      <EntityTypeMapping TypeName="Model.tblPosicao">
+        <MappingFragment StoreEntitySet="tblPosicao">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CodRotaAtual" ColumnName="CodRotaAtual" />
+          <ScalarProperty Name="RegAtualLeit" ColumnName="RegAtualLeit" />
+          <ScalarProperty Name="RegAtual" ColumnName="RegAtual" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
