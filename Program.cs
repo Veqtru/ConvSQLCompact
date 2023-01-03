@@ -95,7 +95,7 @@ namespace ConvSQLCompact
                         Environment.Exit(0);
                     }
                 }
-               
+
 
             }
             else
@@ -166,10 +166,18 @@ namespace ConvSQLCompact
                             try
                             {
                                 Console.WriteLine("Iniciando transferência de arquivos...");
-                                device.DeleteDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"), true);
+
+                                if (device.FileExists(Path.Combine(armazenamentoInterno, $@"HidroTemp/In")))
+                                {
+                                    device.DeleteDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"), true);
+                                }
+                                    
+                                device.DeleteDirectory(Path.Combine(armazenamentoInterno, $@"HidroTemp/In"));
 
                                 //CRIA AS PASTAS NO ANDROID
                                 device.CreateDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"));
+
+
 
                                 //PARA CADA ARQUIVO DENTRO DA PASTA OUT DO CONVERSOR
                                 foreach (string newPath in Directory.GetFiles(caminhoConversorSaida, "*.*", SearchOption.AllDirectories))
@@ -177,20 +185,9 @@ namespace ConvSQLCompact
                                     //PEGA O NOME DO ARQUIVO DE FORMA DINÂMICA
                                     var arquivo = newPath.Split('\\').Last();
 
-                                    //VERIFICA SE JÁ EXISTE
-                                    if (device.FileExists(Path.Combine(armazenamentoInterno, $@"HidroTemp/In/{arquivo}")))
-                                    {
-                                        //DELETA E COPIA
-                                        
-                                        device.DeleteFile(Path.Combine(armazenamentoInterno, $@"HidroTemp\In\{arquivo}"));
-                                        device.Cancel();
-                                        device.UploadFile(newPath, $@"{armazenamentoInterno}\HidroTemp\In\{arquivo}");
-                                    }
-                                    else
-                                    {
-                                        //SÓ COPIA
-                                        device.UploadFile(newPath, $@"{armazenamentoInterno}\HidroTemp\In\{arquivo}");
-                                    }
+                                    //SÓ COPIA
+                                    device.UploadFile(newPath, $@"{armazenamentoInterno}\HidroTemp\In\{arquivo}");
+
 
                                 }
                             }
@@ -267,10 +264,10 @@ namespace ConvSQLCompact
                             try
                             {
                                 //CRIA AS PASTAS NO ANDROID
-                                device.CreateDirectory(Path.Combine(armazenamentoInterno, "HidroMobile/Out"));
+                                device.CreateDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/Out"));
 
 
-                                foreach (string newPath in device.GetFiles(Path.Combine(armazenamentoInterno, "HidroMobile/Out")))
+                                foreach (string newPath in device.GetFiles(Path.Combine(armazenamentoInterno, "HidroTemp/Out")))
                                 {
                                     //PEGA O NOME DO ARQUIVO DE FORMA DINÂMICA
                                     var a = newPath;
