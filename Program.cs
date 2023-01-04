@@ -22,7 +22,7 @@ namespace ConvSQLCompact
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-
+        
         static HidroMobileEntities db = new HidroMobileEntities();
         static int contador;
         static int totItens;
@@ -30,8 +30,11 @@ namespace ConvSQLCompact
         static string caminhoConversorSaida = Path.Combine("C:\\HidroMobile\\Json\\Out");
         static bool conectado = false;
         static bool success = false;
+
+
         static void Main(string[] args)
         {
+            
             if (args.Length == 0)
             {
                 Console.WriteLine("Parametro nao fornecido. Devera ser IN (converter arquivos em JSON para SQL) ou OUT (converter arquivos SQL para JSON");
@@ -123,11 +126,12 @@ namespace ConvSQLCompact
             }
 
         }
-
         static void EnviarParaSmartphone(string[] args)
         {
+
             try
             {
+
                 //pega a lista de todos smartphones conectados no pc
                 var devices = MediaDevice.GetDevices();
 
@@ -144,6 +148,7 @@ namespace ConvSQLCompact
                     //faz a busca pelo smartphone selecionado na view
                     using (var device = devices.First())
                     {
+
                         //conecta com o smartphone
                         device.Connect();
                         Console.WriteLine("\nConectado com o Smartphone...");
@@ -167,24 +172,26 @@ namespace ConvSQLCompact
                             {
                                 Console.WriteLine("Iniciando transferência de arquivos...");
 
-                                if (device.FileExists(Path.Combine(armazenamentoInterno, $@"HidroTemp/In")))
+                                if (device.DirectoryExists(Path.Combine(armazenamentoInterno, $@"HidroTemp\In")) == true)
                                 {
-                                    device.DeleteDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"), true);
+                                    Console.WriteLine("\n\nFoi detectado um arquvo de rota no smartphone, faça a importação pelo HidroMobile e tente novamente...");
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                    Environment.Exit(0);
                                 }
-                                    
-                                device.DeleteDirectory(Path.Combine(armazenamentoInterno, $@"HidroTemp/In"));
 
                                 //CRIA AS PASTAS NO ANDROID
-                                device.CreateDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"));
+                                device.CreateDirectory(Path.Combine(armazenamentoInterno, $@"HidroTemp\In"));
 
 
 
                                 //PARA CADA ARQUIVO DENTRO DA PASTA OUT DO CONVERSOR
-                                foreach (string newPath in Directory.GetFiles(caminhoConversorSaida, "*.*", SearchOption.AllDirectories))
+                                var a = Directory.GetFiles(caminhoConversorSaida);
+                                foreach (string newPath in Directory.GetFiles(caminhoConversorSaida))
                                 {
                                     //PEGA O NOME DO ARQUIVO DE FORMA DINÂMICA
                                     var arquivo = newPath.Split('\\').Last();
-
+                                    Console.WriteLine($"Transferindo arquivo:{arquivo}...");
                                     //SÓ COPIA
                                     device.UploadFile(newPath, $@"{armazenamentoInterno}\HidroTemp\In\{arquivo}");
 
