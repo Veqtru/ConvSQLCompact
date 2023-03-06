@@ -16,25 +16,55 @@ using MediaDevices;
 using System.Runtime.CompilerServices;
 using System.Web.UI.WebControls.Expressions;
 using static System.Net.Mime.MediaTypeNames;
+using System.Web.Security;
+using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace ConvSQLCompact
 {
     class Program
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Program));
-        
+
         static HidroMobileEntities db = new HidroMobileEntities();
         static int contador;
         static int totItens;
         static string caminhoConversorEntrada = Path.Combine("C:\\HidroMobile\\Json\\In");
         static string caminhoConversorSaida = Path.Combine("C:\\HidroMobile\\Json\\Out");
+        static string caminhoConversorBkp = Path.Combine("C:\\HidroMobile\\Json\\Backup");
         static bool conectado = false;
         static bool success = false;
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
+        static extern IntPtr FindWindowByCaption(IntPtr zeroOnly, string lpWindowName);
 
 
         static void Main(string[] args)
         {
-            
+
+            string originalTitle = Console.Title;
+            string uniqueTitle = Guid.NewGuid().ToString();
+            Console.Title = uniqueTitle;
+            Thread.Sleep(50);
+            IntPtr handle = FindWindowByCaption(IntPtr.Zero, uniqueTitle);
+
+            if (handle == IntPtr.Zero)
+            {
+                Console.WriteLine("Oops, cant find main window.");
+                return;
+            }
+            Console.Title = originalTitle;
+
+            //while (true)
+            //{
+            //    Thread.Sleep(3000);
+            //    Console.WriteLine(handle);
+            //}
+
             if (args.Length == 0)
             {
                 Console.WriteLine("Parametro nao fornecido. Devera ser IN (converter arquivos em JSON para SQL) ou OUT (converter arquivos SQL para JSON");
@@ -42,64 +72,47 @@ namespace ConvSQLCompact
             }
             if (args[0].ToUpper() == "IN")
             {
-                //confere conexão com smartphone
-                //caso conectado executa a transferencia de arquivos para o pc
-                //se não estiver tudo ok, exibe inicia conversão para sql
 
-                while (conectado == false)
+                //executa a transferencia de arquivos para o pc
+                //se não estiver tudo ok, inicia conversão para sql
+
+                while (success == false)
                 {
-                    VerificarConexao(args);
+                    ReceberDoSmartphone(args);
                 }
-                if (conectado)
+                if (success)
                 {
-                    while (success == false)
+                    success = false;
+                    ConverteIn();
+                    if (success == false)
                     {
-                        ReceberDoSmartphone(args);
+                        Console.WriteLine("\n\nErro na conversão dos dados, o processo será finalizado.");
+                        Console.ReadKey();
                     }
-                    if (success)
+                    else
                     {
-                        success = false;
-                        ConverteIn();
-                        if (success == false)
-                        {
-                            Console.WriteLine("\n\nErro na conversão dos dados, o processo será finalizado.");
-                            Console.ReadKey();
-                        }
-                        else
-                        {
-                            Console.WriteLine("\nArquivos foram convertidos com sucesso.");
-                            Environment.Exit(0);
-                        }
+                        Console.WriteLine("\nArquivos foram convertidos com sucesso.");
+                        CriarBackup();
+                        Environment.Exit(0);
                     }
-
                 }
-
-
             }
             else if (args[0].ToUpper() == "OUT")
             {
                 //inicia a conversão para json
                 //se estiver tudo ok, inicia transferencia para o smartphone
-                while (conectado == false)
-                {
-                    VerificarConexao(args);
-                }
-                if (conectado)
-                {
-                    ConverteOut();
-                    if (success)
-                    {
-                        EnviarParaSmartphone(args);
-                    }
-                    else
-                    {
-                        Console.WriteLine("\n\nErro na conversão dos dados, o processo será finalizado.");
-                        Console.ReadKey();
-                        Environment.Exit(0);
-                    }
-                }
 
-
+                ConverteOut();
+                if (success)
+                {
+                    EnviarParaSmartphone(args);
+                }
+                else
+                {
+                    Console.WriteLine("\n\nErro na conversão dos dados, o processo será finalizado.");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
             }
             else
             {
@@ -107,25 +120,6 @@ namespace ConvSQLCompact
             }
         }
 
-        static void VerificarConexao(string[] args)
-        {
-            var devices = MediaDevice.GetDevices();
-
-            if (devices.ToList().Count <= 0)
-            {
-                conectado = false;
-                Console.WriteLine("Nenhum Smartphone encontrado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
-                Console.ReadKey();
-                Console.Clear();
-                return;
-            }
-            else
-            {
-                conectado = true;
-                return;
-            }
-
-        }
         static void EnviarParaSmartphone(string[] args)
         {
 
@@ -138,7 +132,7 @@ namespace ConvSQLCompact
                 if (devices.ToList().Count <= 0)
                 {
                     success = false;
-                    Console.WriteLine("\n\nNenhum Smartphone encontrado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
+                    Console.WriteLine("\n\nNenhum celular conectado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
                     Console.ReadKey();
                     Console.Clear();
                     Main(args);
@@ -160,41 +154,41 @@ namespace ConvSQLCompact
                         if (armazenamentoInterno == $@"\")
                         {
                             success = false;
-                            Console.WriteLine("\n\nSmartphone mal conenctado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
+                            Console.WriteLine("\n\nCelular mal conenctado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
                             Console.ReadKey();
                             Console.Clear();
                             Main(args);
                         }
                         else
                         {
-                            Console.WriteLine("Conectado com a pasta interna do Smartphone...");
+                            Console.WriteLine("Conectado com a pasta interna do celular...");
                             try
                             {
                                 Console.WriteLine("Iniciando transferência de arquivos...");
 
-                                if (device.DirectoryExists(Path.Combine(armazenamentoInterno, $@"HidroTemp\In")) == true)
-                                {
-                                    Console.WriteLine("\n\nFoi detectado um arquvo de rota no smartphone, faça a importação pelo HidroMobile e tente novamente...");
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Environment.Exit(0);
-                                }
-
                                 //CRIA AS PASTAS NO ANDROID
                                 device.CreateDirectory(Path.Combine(armazenamentoInterno, $@"HidroTemp\In"));
 
+                                //DELETAR SE HOUVER
+                                if (device.DirectoryExists(Path.Combine(armazenamentoInterno, $@"HidroTemp\In")))
+                                {
+                                    //DELETA A PASTA E OS ARQUIVOS
+                                    device.DeleteDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"), true);
 
+                                    //CRIA A PASTA NOVAMENTE
+                                    device.CreateDirectory(Path.Combine(armazenamentoInterno, "HidroTemp/In"));
+                                }
 
                                 //PARA CADA ARQUIVO DENTRO DA PASTA OUT DO CONVERSOR
-                                var a = Directory.GetFiles(caminhoConversorSaida);
                                 foreach (string newPath in Directory.GetFiles(caminhoConversorSaida))
                                 {
+
                                     //PEGA O NOME DO ARQUIVO DE FORMA DINÂMICA
                                     var arquivo = newPath.Split('\\').Last();
                                     Console.WriteLine($"Transferindo arquivo:{arquivo}...");
-                                    //SÓ COPIA
-                                    device.UploadFile(newPath, $@"{armazenamentoInterno}\HidroTemp\In\{arquivo}");
 
+                                    //TRANSFERIR ARQUIVO
+                                    device.UploadFile(newPath, $@"{armazenamentoInterno}\HidroTemp\In\{arquivo}");
 
                                 }
                             }
@@ -203,6 +197,7 @@ namespace ConvSQLCompact
                                 device.Disconnect();
                                 success = false;
                                 Console.WriteLine("\n\nArquivos não foram copiados, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
+                                Console.WriteLine($"\n\n {ex}");
                                 Console.ReadKey();
                                 Console.Clear();
                                 Main(args);
@@ -212,7 +207,7 @@ namespace ConvSQLCompact
 
                         device.Disconnect();
                         success = true;
-                        Console.WriteLine("\n\nOs arquivos foram transferidos com êxito para o Smartphone!");
+                        Console.WriteLine("\n\nOs arquivos foram transferidos com êxito para o celular!");
                         System.Environment.Exit(1);
                     }
                 }
@@ -232,6 +227,61 @@ namespace ConvSQLCompact
 
         }
 
+        static void CriarBackup()
+        {
+            //BACKUP
+
+            if (!Directory.Exists(caminhoConversorBkp))
+            {
+                Directory.CreateDirectory(caminhoConversorBkp);
+            }
+
+            var nomeRota = "";
+
+            string pastaIn = ConfigurationManager.AppSettings["FolderIn"];
+            using (StreamReader r = new StreamReader(pastaIn + "tblRota.json"))
+            {
+                string json = r.ReadToEnd();
+                var obj = JsonConvert.DeserializeObject<List<tblRota>>(json);
+                nomeRota = "ROTA_" + obj[0].DescRota;
+            }
+
+
+            if (Directory.Exists(Path.Combine(caminhoConversorBkp, nomeRota)))
+            {
+                //lista todas as pastas com mais de 90 dias e exclui
+                foreach (var dir in Directory.GetDirectories(Path.Combine(caminhoConversorBkp, nomeRota)))
+                {
+                    DateTime diaBkp = DateTime.Parse(dir.Split(' ')[1].Replace("_", "/"));
+
+                    DateTime diaAtual = DateTime.Now;
+
+                    var dif = diaAtual - diaBkp;
+                    if (dif.Days >= 90)
+                    {
+                        Directory.Delete(dir, true);
+                    }
+                }
+            }
+
+            //cria nome da pasta
+            var nomepasta = $@"{nomeRota}\DATA_ {DateTime.Now.Day}_{DateTime.Now.Month}_{DateTime.Now.Year} {DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Millisecond}";
+            var CaminhoBase = Path.Combine(caminhoConversorBkp, nomepasta);
+                //$@"{caminhoConversorBkp}\\{nomepasta}";
+            if (!Directory.Exists(CaminhoBase))
+            {
+                //criar pasta 
+                Directory.CreateDirectory(CaminhoBase);
+            }
+
+            foreach (var file in Directory.GetFiles(caminhoConversorEntrada))
+            {
+                var arquivo = file.Split('\\').Last();
+                var nomearquivo = Path.Combine(CaminhoBase, arquivo);
+                File.Copy(file, nomearquivo);
+            }
+        }
+
         static void ReceberDoSmartphone(string[] args)
         {
             try
@@ -242,7 +292,7 @@ namespace ConvSQLCompact
                 if (devices.ToList().Count <= 0)
                 {
                     success = false;
-                    Console.WriteLine("\n\nNenhum Smartphone encontrado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
+                    Console.WriteLine("\n\nNenhum Celular encontrado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
                     Console.ReadKey();
                     Console.Clear();
                     Main(args);
@@ -261,7 +311,7 @@ namespace ConvSQLCompact
 
                         if (armazenamentoInterno == $@"\")
                         {
-                            Console.WriteLine("\n\nSmartphone mal conenctado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
+                            Console.WriteLine("\n\nCelular mal conenctado, verifique a conexão USB e pressione qualquer tecla para tentar novamente...");
                             Console.ReadKey();
                             Console.Clear();
                             Main(args);
@@ -276,25 +326,21 @@ namespace ConvSQLCompact
 
                                 foreach (string newPath in device.GetFiles(Path.Combine(armazenamentoInterno, "HidroTemp/Out")))
                                 {
-                                    //PEGA O NOME DO ARQUIVO DE FORMA DINÂMICA
-                                    var a = newPath;
-
-                                    //var arquivo = newPath.Substring(37);
                                     var arquivo = newPath.Split('\\').Last();
 
-                                    var b = $@"{caminhoConversorEntrada}\{arquivo}";
                                     //VERIFICA SE JÁ EXISTE
                                     if (File.Exists($@"{caminhoConversorEntrada}\{arquivo}"))
                                     {
-                                        //DELETA E //COPIA
+                                        //DELETA
                                         File.Delete($@"{caminhoConversorEntrada}\{arquivo}");
 
+                                        //TRANSFERE
                                         device.DownloadFile(newPath, $@"{caminhoConversorEntrada}\{arquivo}");
 
                                     }
                                     else
                                     {
-                                        //SÓ COPIA
+                                        //SÓ TRANSFERE
                                         device.DownloadFile(newPath, $@"{caminhoConversorEntrada}\{arquivo}");
                                     }
                                 }
@@ -328,7 +374,6 @@ namespace ConvSQLCompact
                 var a = ex;
                 return;
             }
-
             return;
         }
 
