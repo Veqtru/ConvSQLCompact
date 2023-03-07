@@ -35,36 +35,9 @@ namespace ConvSQLCompact
         static bool conectado = false;
         static bool success = false;
 
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
-        static extern IntPtr FindWindowByCaption(IntPtr zeroOnly, string lpWindowName);
-
 
         static void Main(string[] args)
         {
-
-            string originalTitle = Console.Title;
-            string uniqueTitle = Guid.NewGuid().ToString();
-            Console.Title = uniqueTitle;
-            Thread.Sleep(50);
-            IntPtr handle = FindWindowByCaption(IntPtr.Zero, uniqueTitle);
-
-            if (handle == IntPtr.Zero)
-            {
-                Console.WriteLine("Oops, cant find main window.");
-                return;
-            }
-            Console.Title = originalTitle;
-
-            //while (true)
-            //{
-            //    Thread.Sleep(3000);
-            //    Console.WriteLine(handle);
-            //}
-
             if (args.Length == 0)
             {
                 Console.WriteLine("Parametro nao fornecido. Devera ser IN (converter arquivos em JSON para SQL) ou OUT (converter arquivos SQL para JSON");
@@ -267,7 +240,7 @@ namespace ConvSQLCompact
             //cria nome da pasta
             var nomepasta = $@"{nomeRota}\DATA_ {DateTime.Now.Day}_{DateTime.Now.Month}_{DateTime.Now.Year} {DateTime.Now.Hour}-{DateTime.Now.Minute}-{DateTime.Now.Millisecond}";
             var CaminhoBase = Path.Combine(caminhoConversorBkp, nomepasta);
-                //$@"{caminhoConversorBkp}\\{nomepasta}";
+            //$@"{caminhoConversorBkp}\\{nomepasta}";
             if (!Directory.Exists(CaminhoBase))
             {
                 //criar pasta 
