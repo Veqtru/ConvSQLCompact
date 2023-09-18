@@ -270,6 +270,10 @@
     <Property Name="MacAddress" Type="nvarchar" MaxLength="12" />
     <Property Name="ProximaLeitura" Type="datetime" />
     <Property Name="PosIniImpressao" Type="int" />
+    <Property Name="PixChave" Type="nvarchar" MaxLength="50" />
+    <Property Name="PixMerchantName" Type="nvarchar" MaxLength="25" />
+    <Property Name="PixTXIDPrefixo" Type="nvarchar" MaxLength="25" />
+    <Property Name="PixMerchantCity" Type="nvarchar" MaxLength="25" />
   </EntityType>
   <EntityType Name="tblSistemaAbast">
     <Key>

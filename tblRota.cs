@@ -24,5 +24,9 @@ namespace ConvSQLCompact
         public string MacAddress { get; set; }
         public Nullable<System.DateTime> ProximaLeitura { get; set; }
         public Nullable<int> PosIniImpressao { get; set; }
+        public string PixChave { get; set; }
+        public string PixMerchantName { get; set; }
+        public string PixTXIDPrefixo { get; set; }
+        public string PixMerchantCity { get; set; }
     }
 }

@@ -241,6 +241,10 @@
           <ScalarProperty Name="MacAddress" ColumnName="MacAddress" />
           <ScalarProperty Name="ProximaLeitura" ColumnName="ProximaLeitura" />
           <ScalarProperty Name="PosIniImpressao" ColumnName="PosIniImpressao" />
+          <ScalarProperty Name="PixChave" ColumnName="PixChave" />
+          <ScalarProperty Name="PixMerchantName" ColumnName="PixMerchantName" />
+          <ScalarProperty Name="PixTXIDPrefixo" ColumnName="PixTXIDPrefixo" />
+          <ScalarProperty Name="PixMerchantCity" ColumnName="PixMerchantCity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
