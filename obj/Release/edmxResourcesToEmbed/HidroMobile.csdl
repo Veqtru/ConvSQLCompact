@@ -15,6 +15,8 @@
     <Property Name="CaoBravo" Type="Int32" />
     <Property Name="AlterouCad" Type="Int32" />
     <Property Name="NumSoc" Type="Int32" />
+    <Property Name="Numero" Type="Int32" />
+    <Property Name="Complemento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="tblLeitura">
     <Key>
@@ -241,6 +243,7 @@
     <Property Name="PixMerchantName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="PixTXIDPrefixo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="PixMerchantCity" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="AtualizaCadastro" Type="Bit" Nullable="false" />
   </EntityType>
   <EntityType Name="tblSistemaAbast">
     <Key>

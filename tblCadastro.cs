@@ -25,5 +25,7 @@ namespace ConvSQLCompact
         public Nullable<int> CaoBravo { get; set; }
         public Nullable<int> AlterouCad { get; set; }
         public Nullable<int> NumSoc { get; set; }
+        public Nullable<int> Numero { get; set; }
+        public string Complemento { get; set; }
     }
 }

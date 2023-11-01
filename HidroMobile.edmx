@@ -20,6 +20,8 @@
 					<Property Name="CaoBravo" Type="int" />
 					<Property Name="AlterouCad" Type="int" />
 					<Property Name="NumSoc" Type="int" />
+					<Property Name="Numero" Type="int"/>
+					<Property Name="Complemento" Type="nvarchar" MaxLength="15" />
 				</EntityType>
 				<EntityType Name="tblEncargos">
 					<Key>
@@ -279,6 +281,7 @@
 					<Property Name="PixMerchantName" Type="nvarchar" MaxLength="25" />
 					<Property Name="PixTXIDPrefixo" Type="nvarchar" MaxLength="25" />
 					<Property Name="PixMerchantCity" Type="nvarchar" MaxLength="25" />
+					<Property Name="AtualizaCadastro" Type="bit" Nullable="false" />
 				</EntityType>
 				<EntityType Name="tblSistemaAbast">
 					<Key>
@@ -411,6 +414,8 @@
 					<Property Name="CaoBravo" Type="Int32" />
 					<Property Name="AlterouCad" Type="Int32" />
 					<Property Name="NumSoc" Type="Int32" />
+					<Property Name="Numero" Type="Int32"/>
+					<Property Name="Complemento" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
 				</EntityType>
 				<EntityType Name="tblLeitura">
 					<Key>
@@ -637,6 +642,7 @@
 					<Property Name="PixMerchantName" Type="String" MaxLength="25" FixedLength="false" Unicode="true"/>
 					<Property Name="PixTXIDPrefixo" Type="String" MaxLength="25" FixedLength="false" Unicode="true"/>
 					<Property Name="PixMerchantCity" Type="String" MaxLength="25" FixedLength="false" Unicode="true"/>
+					<Property Name="AtualizaCadastro" Type="Bit" Nullable="false" />
 				</EntityType>
 				<EntityType Name="tblSistemaAbast">
 					<Key>
@@ -802,6 +808,9 @@
 								<ScalarProperty Name="CaoBravo" ColumnName="CaoBravo" />
 								<ScalarProperty Name="AlterouCad" ColumnName="AlterouCad" />
 								<ScalarProperty Name="NumSoc" ColumnName="NumSoc" />
+								<ScalarProperty Name="Numero" ColumnName="Numero"/>
+								<ScalarProperty Name="Complemento" ColumnName="Complemento" />
+								
 							</MappingFragment>
 						</EntityTypeMapping>
 					</EntitySetMapping>
@@ -1032,6 +1041,7 @@
 								<ScalarProperty Name="PixMerchantName" ColumnName="PixMerchantName" />
 								<ScalarProperty Name="PixTXIDPrefixo" ColumnName="PixTXIDPrefixo" />
 								<ScalarProperty Name="PixMerchantCity" ColumnName="PixMerchantCity" />
+								<ScalarProperty Name="AtualizaCadastro" ColumnName="AtualizaCadastro" />
 							</MappingFragment>
 						</EntityTypeMapping>
 					</EntitySetMapping>

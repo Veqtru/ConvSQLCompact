@@ -39,7 +39,6 @@ C:\GitHub\ConvSQLCompact\bin\Release\MediaDevices.pdb
 C:\GitHub\ConvSQLCompact\bin\Release\MediaDevices.xml
 C:\GitHub\ConvSQLCompact\bin\Release\Newtonsoft.Json.xml
 C:\GitHub\ConvSQLCompact\obj\Release\ConvSQLCompact.csproj.AssemblyReference.cache
-C:\GitHub\ConvSQLCompact\obj\Release\ConvSQLCompact.csproj.SuggestedBindingRedirects.cache
 C:\GitHub\ConvSQLCompact\obj\Release\ConvSQLCompact.csproj.CoreCompileInputs.cache
 C:\GitHub\ConvSQLCompact\obj\Release\ConvSQLCompact.csproj.CopyComplete
 C:\GitHub\ConvSQLCompact\obj\Release\ConvSQLCompact.exe

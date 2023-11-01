@@ -15,6 +15,8 @@
     <Property Name="CaoBravo" Type="int" />
     <Property Name="AlterouCad" Type="int" />
     <Property Name="NumSoc" Type="int" />
+    <Property Name="Numero" Type="int" />
+    <Property Name="Complemento" Type="nvarchar" MaxLength="15" />
   </EntityType>
   <EntityType Name="tblEncargos">
     <Key>
@@ -274,6 +276,7 @@
     <Property Name="PixMerchantName" Type="nvarchar" MaxLength="25" />
     <Property Name="PixTXIDPrefixo" Type="nvarchar" MaxLength="25" />
     <Property Name="PixMerchantCity" Type="nvarchar" MaxLength="25" />
+    <Property Name="AtualizaCadastro" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="tblSistemaAbast">
     <Key>

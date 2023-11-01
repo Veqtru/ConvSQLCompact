@@ -28,5 +28,6 @@ namespace ConvSQLCompact
         public string PixMerchantName { get; set; }
         public string PixTXIDPrefixo { get; set; }
         public string PixMerchantCity { get; set; }
+        public Nullable<bool> AtualizaCadastro { get; set; }
     }
 }
