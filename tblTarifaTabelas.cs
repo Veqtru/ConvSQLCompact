@@ -18,5 +18,6 @@ namespace ConvSQLCompact
         public string DescTabela { get; set; }
         public Nullable<System.DateTime> DataVigor { get; set; }
         public Nullable<int> CodTabelaOrigem { get; set; }
+        public int ReajusteProporcional { get; set; }
     }
 }

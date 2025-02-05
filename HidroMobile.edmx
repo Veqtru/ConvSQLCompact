@@ -331,6 +331,7 @@
 					<Property Name="DescTabela" Type="nvarchar" MaxLength="50" />
 					<Property Name="DataVigor" Type="datetime" />
 					<Property Name="CodTabelaOrigem" Type="int" />
+					<Property Name="ReajusteProporcional" Type="int" Nullable="false" />
 				</EntityType>
 				<EntityType Name="tblTarifaTabelasCategoria">
 					<Key>
@@ -692,6 +693,7 @@
 					<Property Name="DescTabela" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
 					<Property Name="DataVigor" Type="DateTime" Precision="3" />
 					<Property Name="CodTabelaOrigem" Type="Int32" />
+					<Property Name="ReajusteProporcional" Type="Int32" Nullable="false" />
 				</EntityType>
 				<EntityType Name="tblTarifaTabelasCategoria">
 					<Key>
@@ -1093,6 +1095,7 @@
 								<ScalarProperty Name="DescTabela" ColumnName="DescTabela" />
 								<ScalarProperty Name="DataVigor" ColumnName="DataVigor" />
 								<ScalarProperty Name="CodTabelaOrigem" ColumnName="CodTabelaOrigem" />
+								<ScalarProperty Name="ReajusteProporcional" ColumnName="ReajusteProporcional" />
 							</MappingFragment>
 						</EntityTypeMapping>
 					</EntitySetMapping>
